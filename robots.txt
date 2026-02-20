@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://denny-architect.github.io/health-code/sitemap.xml
