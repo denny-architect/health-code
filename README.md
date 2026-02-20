@@ -2,9 +2,12 @@
 
 > A developer-friendly nutrition protocol featuring optimized smoothie recipes and a complete health roadmap.
 
+🌐 **Live Site:** [https://denny-architect.github.io/health-code/](https://denny-architect.github.io/health-code/)
+
 [![Made with HTML](https://img.shields.io/badge/Made%20with-HTML-e34c26?style=flat-square&logo=html5)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![Styled with CSS](https://img.shields.io/badge/Styled%20with-CSS-264de4?style=flat-square&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Vanilla JS](https://img.shields.io/badge/Powered%20by-Vanilla%20JS-f7df1e?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-222?style=flat-square&logo=github)](https://denny-architect.github.io/health-code/)
 
 ## 🎯 Mission
 
