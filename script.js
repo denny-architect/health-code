@@ -1,4 +1,4 @@
-// Tres Comas Nutrition Labs v4.0
+// Tres Comas Nutrition Labs v5.0 — Big Character Energy Edition
 // MCP: Meal Context Protocol v1.0 — deployed to production
 // Vibe-coded by a 10x engineer on 2 smoothies and zero sleep
 // "I own 10% of this codebase." — E. Bachman
@@ -145,6 +145,78 @@ document.addEventListener('DOMContentLoaded', () => {
     characterComments.forEach(comment => {
         commentObserver.observe(comment);
     });
+
+    // ============================================
+    // SECTION HOST PANELS - SLIDE IN ANIMATION
+    // ============================================
+    const hostPanels = document.querySelectorAll('.section-host-panel');
+    
+    const hostObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, 200);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    hostPanels.forEach(panel => {
+        hostObserver.observe(panel);
+    });
+
+    // ============================================
+    // TRADING CARDS - SCROLL ANIMATION
+    // ============================================
+    const tradingCards = document.querySelectorAll('.trading-card');
+    
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    tradingCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        cardObserver.observe(card);
+    });
+
+    // ============================================
+    // COMMA METER POWER-UP ANIMATION (anime.js)
+    // ============================================
+    if (typeof anime !== 'undefined') {
+        const commaMeter = document.querySelector('.comma-meter');
+        if (commaMeter) {
+            anime({
+                targets: '.comma-unit.achieved',
+                scale: [1, 1.2, 1],
+                easing: 'easeInOutQuad',
+                duration: 800,
+                delay: 500,
+                loop: false
+            });
+        }
+        
+        // Hero card hero image subtle animation
+        const heroCardImage = document.querySelector('.hero-card-image');
+        if (heroCardImage) {
+            anime({
+                targets: heroCardImage,
+                translateY: [-20, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1200,
+                delay: 300
+            });
+        }
+    }
 
     // ============================================
     // TAB SWITCHING FUNCTIONALITY
@@ -372,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================
     const versionBadge = document.querySelector('.version-badge');
     if (versionBadge) {
-        versionBadge.title = 'Tres Comas Nutrition Labs v4.0 — Unicorn Edition · $1.2B (Russ disagrees)';
+        versionBadge.title = 'Tres Comas Nutrition Labs v5.0 — Big Character Energy Edition · $1.2B (Russ still disgusted)';
     }
 
     // ============================================
@@ -384,10 +456,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const teamCards = document.querySelectorAll('.team-card');
     const pressReleases = document.querySelectorAll('.press-release');
     
+    const tradingCardCount = document.querySelectorAll('.trading-card').length;
+    
     console.log(`
     %c╔════════════════════════════════════════════════════════════════╗
-    ║   ,,, TRES COMAS NUTRITION LABS v4.0 INITIALIZED               ║
+    ║   ,,, TRES COMAS NUTRITION LABS v5.0 INITIALIZED               ║
     ║   ─────────────────────────────────────────────────            ║
+    ║   Edition: BIG CHARACTER ENERGY EDITION                        ║
     ║   Status: DEPLOYED TO PRODUCTION                               ║
     ║   Valuation: $1.2B (Russ says one comma is embarrassing)       ║
     ║   Target: YOUR THREE-COMMA BODY                                ║
@@ -396,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ║   Total Recipes: ${totalRecipes.length}                                            ║
     ║   🥷 Ninja Recipes: ${ninjaRecipes.length}                                          ║
     ║   💬 Character Comments: ${characterCommentCount}                                      ║
-    ║   👥 Team Members: ${teamCards.length + 1}                                           ║
+    ║   🃏 Trading Cards: ${tradingCardCount}                                             ║
     ║   📰 Press Releases: ${pressReleases.length}                                           ║
     ║   Vertical Markets: Smoothies, Soups, Sauces, Frozen           ║
     ║   ─────────────────────────────────────────────────            ║
@@ -413,6 +488,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('%c💡 Pro Tip: Try the Konami Code for Three Comma Mode! ↑↑↓↓←→←→BA', 
                 'color: #00ff9f; font-family: monospace;');
     
-    console.log('%c,,, Tres Comas Nutrition Labs · Hacker Hostel · Palo Alto, CA · Est. 2:47am', 
+    console.log('%c,,, Tres Comas Nutrition Labs v5.0 · Big Character Energy Edition · Est. 2:47am', 
                 'color: #C9A84C; font-family: monospace; font-weight: bold;');
 });

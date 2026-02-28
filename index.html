@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tres Comas Nutrition Labs ,,, | Middle-Out Macro Compression v4.0</title>
+    <title>Tres Comas Nutrition Labs ,,, | Middle-Out Macro Compression v5.0</title>
     
     <!-- FIXME: work-life balance (low priority, closed as wontfix) -->
     <!-- SEO Meta Tags -->
@@ -14,7 +14,7 @@
     
     <!-- NOTE: This protocol has achieved product-market fit. -->
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Tres Comas Nutrition Labs ,,, | v4.0 Unicorn Edition">
+    <meta property="og:title" content="Tres Comas Nutrition Labs ,,, | v5.0 Big Character Energy Edition">
     <meta property="og:description" content="Nutrition infrastructure for the three-comma body. $1.2B valuation. Middle-out macro compression.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://denny-architect.github.io/health-code/">
@@ -22,7 +22,7 @@
     <!-- WARNING: May cause unsolicited optimization advice at daily standup. -->
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tres Comas Nutrition Labs ,,, | v4.0">
+    <meta name="twitter:title" content="Tres Comas Nutrition Labs ,,, | v5.0">
     <meta name="twitter:description" content="Nutrition infrastructure for the three-comma body. $1.2B valuation.">
     
     <!-- PIVOT COMPLETE: from tired → wired ↗ -->
@@ -33,57 +33,108 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <!-- Spaces vs. Tabs: we use neither. We use blenders. -->
 </head>
 <body>
     <!-- catch(burnout) { console.log("pivot to soups") } -->
     <canvas id="particle-canvas"></canvas>
     
-    <header class="hero">
-        <!-- Running middle-out compression on your macros -->
-        <div class="container">
-            <div class="tres-comas-stamp">
-                <span class="stamp-symbol">,,,</span>
-                <span class="stamp-title">TRES COMAS NUTRITION LABS™</span>
-                <span class="stamp-location">Palo Alto, CA · Est. 2:47am</span>
-                <span class="stamp-status">Unicorn Status: ACHIEVED</span>
-                <span class="stamp-tagline">(Russ disagrees)</span>
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- HERO SECTION - V5.0 THREE BAND LAYOUT -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    
+    <!-- BAND 1: THE BRAND IDENTITY BAR -->
+    <header class="brand-identity-bar">
+        <div class="tc-logomark">,,,</div>
+        <div class="tc-brand-center">
+            <div class="tc-company-name">TRES COMAS NUTRITION LABS</div>
+            <div class="tc-product-name">// health-code v5.0 · unicorn edition</div>
+        </div>
+        <div class="tc-status-badge">
+            <span class="status-dot"></span>
+            <span>$1.2B · UNICORN</span>
+            <span class="russ-note">// Russ: insufficient</span>
+        </div>
+    </header>
+    
+    <!-- BAND 2: THE HERO PANORAMA -->
+    <section class="hero-panorama">
+        <div class="panorama-overlay-top"></div>
+        <div class="panorama-overlay-bottom"></div>
+        <img src="assets/brand/team-lineup.png" alt="Tres Comas Team Lineup" class="panorama-image">
+        <img src="assets/brand/logo-hero.png" alt="Tres Comas Logo" class="logo-hero-overlay">
+    </section>
+    
+    <!-- BAND 3: THE COMMA DEFICIT TRACKER -->
+    <section class="comma-deficit-tracker">
+        <div class="tracker-grid">
+            <!-- COLUMN 1: The Comma Tracker Image -->
+            <div class="tracker-image-col">
+                <img src="assets/brand/comma-tracker.png" alt="Comma Tracker">
             </div>
             
-            <div class="logo">
-                <span class="bracket">&lt;</span>
-                <span class="brand">health<span class="dash">-</span>code</span>
-                <span class="bracket">/&gt;</span>
-                <span class="version-badge">v4.0 <span class="version-sub">unicorn edition</span></span>
+            <!-- COLUMN 2: Live HTML Comma Meter -->
+            <div class="comma-meter">
+                <div class="cm-title">// COMMA DEFICIT TRACKER</div>
+                <div class="cm-value">$1,<span class="cm-comma gold">200</span>,<span class="cm-comma dim">000</span>,<span class="cm-comma dim">000</span></div>
+                <div class="cm-commas">
+                    <span class="comma-unit achieved" title="ACHIEVED">
+                        ,<span class="comma-check">✓</span>
+                    </span>
+                    <span class="comma-unit missing" title="MISSING">
+                        ,<span class="comma-x">✗</span>
+                    </span>
+                    <span class="comma-unit missing" title="MISSING">
+                        ,<span class="comma-x">✗</span>
+                    </span>
+                </div>
+                <div class="cm-status">
+                    <span class="cm-achieved">1 comma: ACHIEVED</span>
+                    <span class="cm-deficit">2 commas: OUTSTANDING</span>
+                </div>
             </div>
-            <h1>Optimized Nutrition Protocol</h1>
-            <p class="tagline" id="rotating-tagline">// "Two smoothies a day keeps the bugs away." — R. Hendricks (he already regrets saying it)</p>
             
-            <!-- "You're funded." — electrolytes included, no VC required -->
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-value">~121g</span>
-                    <span class="stat-label">Daily Active Macros</span>
-                    <span class="stat-comment">// pre-revenue. intentional.</span>
+            <!-- COLUMN 3: Russ Quote + Rotating Tagline -->
+            <div class="hero-russ-panel">
+                <div class="russ-avatar-small">
+                    <img src="assets/characters/russ.png" alt="Russ Hanneman">
                 </div>
-                <div class="stat">
-                    <span class="stat-value">15+</span>
-                    <span class="stat-label">SKUs in Pipeline</span>
-                    <span class="stat-comment">// achieving product-market fit</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-value">4</span>
-                    <span class="stat-label">Vertical Markets</span>
-                    <span class="stat-comment">// disrupting all of them</span>
-                </div>
-                <div class="stat glow-stat">
-                    <span class="stat-value">⚡</span>
-                    <span class="stat-label">Minimum Viable Protein™</span>
-                    <span class="stat-comment">// Founder Mode activated</span>
+                <div class="russ-disgust">
+                    <div class="russ-label">// R. Hanneman · Chairman of Vibes</div>
+                    <div class="russ-quote">"One comma. ONE. We are named TRES COMAS. This is not tres. This is UNO. SCHWAAAAG."</div>
                 </div>
             </div>
         </div>
-    </header>
+        
+        <!-- Rotating Tagline -->
+        <div class="rotating-tagline" id="rotating-tagline">
+            // "Two smoothies a day keeps the bugs away." — R. Hendricks (he already regrets saying it)
+        </div>
+    </section>
+
+    <!-- COMMA TICKER STRIP -->
+    <div class="comma-ticker">
+        <div class="ticker-content">
+            <span class="ticker-label">,,,  COMMA STATUS</span>
+            <span class="ticker-item achieved">● Comma 1: $1.2B ACHIEVED</span>
+            <span class="ticker-separator">·</span>
+            <span class="ticker-item missing">○ Comma 2: $10B OUTSTANDING</span>
+            <span class="ticker-separator">·</span>
+            <span class="ticker-item missing">○ Comma 3: $100B OUTSTANDING</span>
+            <span class="ticker-separator">·</span>
+            <span class="ticker-russ">// R. Hanneman: "We are FAILING as a brand."</span>
+            <span class="ticker-spacer"></span>
+            <span class="ticker-label">,,,  COMMA STATUS</span>
+            <span class="ticker-item achieved">● Comma 1: $1.2B ACHIEVED</span>
+            <span class="ticker-separator">·</span>
+            <span class="ticker-item missing">○ Comma 2: $10B OUTSTANDING</span>
+            <span class="ticker-separator">·</span>
+            <span class="ticker-item missing">○ Comma 3: $100B OUTSTANDING</span>
+            <span class="ticker-separator">·</span>
+            <span class="ticker-russ">// R. Hanneman: "We are FAILING as a brand."</span>
+        </div>
+    </div>
 
     <!-- Optimal Tip-to-Tip Efficiency™ applied to macro distribution -->
     <nav class="nav-tabs">
@@ -105,6 +156,16 @@
                 <h2>function <span class="function-name">blendSmoothie</span>() {</h2>
                 <p class="code-comment">// MVP: Minimum Viable Protein — select pre or post workout mode 🚀</p>
             </div>
+            
+            <!-- Section Host Panel - Richard -->
+            <div class="section-host-panel" data-character="richard">
+                <img src="assets/characters/richard.png" class="section-host-img" alt="Richard Hendricks">
+                <div class="section-host-text">
+                    <div class="host-name">// R. Hendricks · Section Lead</div>
+                    <div class="host-quote">"I mean... the smoothies are good. I think. Sorry. They're good."</div>
+                </div>
+            </div>
+            <div class="section-watermark">,,,</div>
 
             <!-- Big Head: achieved this architecture by doing absolutely nothing. Inspiration to us all. -->
 
@@ -783,6 +844,16 @@
                 <h2>function <span class="function-name">warmDeploy</span>() {</h2>
                 <p class="code-comment">// Consider the broth. Nutrient-dense. Warm. Inevitable. — G. Belson</p>
             </div>
+            
+            <!-- Section Host Panel - Gavin -->
+            <div class="section-host-panel" data-character="gavin">
+                <img src="assets/characters/gavin.png" class="section-host-img" alt="Gavin Belson">
+                <div class="section-host-text">
+                    <div class="host-name">// G. Belson · Section Lead</div>
+                    <div class="host-quote">"Consider the broth. Nutrient-dense. Warm. Inevitable. This is what Hooli would have built. We still might."</div>
+                </div>
+            </div>
+            <div class="section-watermark">,,,</div>
 
             <!-- BROCCOLI CHEDDAR SOUP - GAVIN BELSON -->
             <article class="recipe-card ninja-recipe">
@@ -985,6 +1056,16 @@
                 <h2>const <span class="function-name">sideEffects</span> = [</h2>
                 <p class="code-comment">// positive externalities only. no regressions detected.</p>
             </div>
+            
+            <!-- Section Host Panel - Gilfoyle -->
+            <div class="section-host-panel" data-character="gilfoyle">
+                <img src="assets/characters/gilfoyle.png" class="section-host-img" alt="Gilfoyle">
+                <div class="section-host-text">
+                    <div class="host-name">// B. Gilfoyle · Section Lead</div>
+                    <div class="host-quote">"Zero dependencies. Zero false positives. The chipotle creates a threat surface. That's intentional."</div>
+                </div>
+            </div>
+            <div class="section-watermark">,,,</div>
 
             <!-- SUN-DRIED TOMATO SAUCE - DINESH -->
             <article class="recipe-card ninja-recipe">
@@ -1118,6 +1199,16 @@
                 <h2>async function <span class="function-name">cooldown</span>() {</h2>
                 <p class="code-comment">// post-sprint recovery protocol. await results;</p>
             </div>
+            
+            <!-- Section Host Panel - Erlich -->
+            <div class="section-host-panel" data-character="erlich">
+                <img src="assets/characters/erlich.png" class="section-host-img" alt="Erlich Bachman">
+                <div class="section-host-text">
+                    <div class="host-name">// E. Bachman · Section Lead</div>
+                    <div class="host-quote">"I conceptualized the entire frozen vertical during a particularly productive session. I take 10%."</div>
+                </div>
+            </div>
+            <div class="section-watermark">,,,</div>
 
             <!-- WATERMELON MINT GRANITA - MONICA -->
             <article class="recipe-card ninja-recipe">
@@ -1295,158 +1386,148 @@
             </div>
         </section>
 
-        <!-- TEAM TAB -->
+        <!-- TEAM TAB - TRADING CARDS -->
         <section id="team" class="tab-content">
             <div class="intro">
                 <h2>const <span class="function-name">team</span> = new TresComasNutritionLabs({</h2>
                 <p class="code-comment">// "We're making the world a better place through optimized human capital and macro compression." — G. Belson (added himself to the header without asking)</p>
             </div>
+            <div class="section-watermark">,,,</div>
 
-            <!-- RUSS HANNEMAN HERO BANNER -->
-            <div class="team-hero-banner">
-                <div class="team-hero-image">
-                    <img src="assets/characters/russ.png" alt="Russ Hanneman">
-                </div>
-                <div class="team-hero-content">
-                    <span class="tres-comas-symbol">,,,</span>
+            <!-- RUSS HANNEMAN HERO CARD - Full Width -->
+            <div class="trading-card-hero">
+                <img src="assets/cards/card-russ.png" alt="Russ Hanneman Trading Card" class="hero-card-image">
+                <div class="hero-card-bio">
+                    <div class="hero-card-header">TRES COMAS NUTRITION LABS // FOUNDING TEAM</div>
                     <h3>RUSS HANNEMAN</h3>
-                    <p class="hero-title">Chairman of Vibes · Lead Seed Investor · Three Comma Club</p>
-                    <p class="hero-quote">"This company is worth AT LEAST three commas. One comma is a HUMILIATION. We are actively working on this. SCHWAAAAG."</p>
-                    <div class="hero-stats">
+                    <div class="hero-card-title">Chairman of Vibes · Lead Seed Investor · Three Comma Club</div>
+                    <div class="hero-card-equity">12% equity + McLaren condition</div>
+                    <p class="hero-card-text">"This company is worth AT LEAST three commas. One comma is a HUMILIATION. We are actively working on this. SCHWAAAAG."</p>
+                    <div class="hero-card-stats">
                         <strong>Series Seed:</strong> $2M · from the McLaren glove compartment<br>
                         <strong>Board seat:</strong> Yes (disputed, twice)<br>
                         <strong>ROI:</strong> "Radio On Investment. Also the other kind."
                     </div>
-                    <span class="team-hero-badge">,,,</span>
                 </div>
             </div>
 
-            <!-- TEAM GRID -->
-            <div class="team-grid">
-                <!-- Richard Hendricks -->
-                <div class="team-card" data-character="richard">
-                    <div class="team-card-image">
-                        <img src="assets/characters/richard.png" alt="Richard Hendricks">
-                    </div>
-                    <div class="team-card-content">
-                        <div class="team-card-name">Richard Hendricks</div>
-                        <div class="team-card-title">CEO & Accidental Founder</div>
-                        <div class="team-card-equity">34% equity</div>
-                        <div class="team-card-bio">Richard Hendricks accidentally founded Tres Comas Nutrition Labs at 2:47am when Erlich caught him stress-blending in the Hacker Hostel kitchen. He has since turned down three acquisition offers, two of which he regrets. He is the inventor of Middle-Out Macro Compression™ and is currently rewriting the blending algorithm from scratch because the existing one "works fine but bothers him."</div>
-                        <div class="team-card-quote">// "I mean... it's good. I think. Sorry. It's definitely good."</div>
-                    </div>
+            <!-- TRADING CARDS GRID -->
+            <div class="trading-cards-grid">
+                <!-- Richard - Image Card -->
+                <div class="trading-card image-card" data-character="richard">
+                    <img src="assets/cards/card-richard.png" alt="Richard Hendricks Trading Card" class="card-full-image">
                 </div>
 
-                <!-- Erlich Bachman -->
-                <div class="team-card" data-character="erlich">
-                    <div class="team-card-image">
-                        <img src="assets/characters/erlich.png" alt="Erlich Bachman">
-                    </div>
-                    <div class="team-card-content">
-                        <div class="team-card-name">Erlich Bachman</div>
-                        <div class="team-card-title">Chief Vision Officer & Mandatory 10% Stakeholder</div>
-                        <div class="team-card-equity">10% of everything</div>
-                        <div class="team-card-bio">Erlich Bachman discovered Tres Comas Nutrition Labs at 2am when he found Richard using the Hacker Hostel blender. He immediately incorporated a holding company and secured 10% equity before anyone understood what had happened. His 10% stake has survived two legal challenges, one attempted dilution, and an 18-month period during which Erlich was reportedly in Tibet.</div>
-                        <div class="team-card-quote">// "I own 10% of this company. I own 10% of this bio. You're welcome."</div>
-                    </div>
+                <!-- Erlich - Image Card -->
+                <div class="trading-card image-card" data-character="erlich">
+                    <img src="assets/cards/card-erlich.png" alt="Erlich Bachman Trading Card" class="card-full-image">
                 </div>
 
-                <!-- Gilfoyle -->
-                <div class="team-card" data-character="gilfoyle">
-                    <div class="team-card-image">
-                        <img src="assets/characters/gilfoyle.png" alt="Bertram Gilfoyle">
-                    </div>
-                    <div class="team-card-content">
-                        <div class="team-card-name">Bertram Gilfoyle</div>
-                        <div class="team-card-title">CTO — Systems Architecture & Nutrition Security</div>
-                        <div class="team-card-equity">20% equity</div>
-                        <div class="team-card-bio">Gilfoyle did not want to join Tres Comas. He reviewed the codebase as a favor, found seventeen security vulnerabilities and one genuinely inspired architectural decision (the Pre/Post workout toggle), and found himself unable to leave in good conscience. The Tres Comas platform has had zero security breaches, zero hallucinations, and zero tolerance for inefficiency.</div>
-                        <div class="team-card-quote">// "I don't need your approval. The antioxidants don't either."</div>
-                    </div>
+                <!-- Gilfoyle - Image Card -->
+                <div class="trading-card image-card" data-character="gilfoyle">
+                    <img src="assets/cards/card-gilfoyle.png" alt="Gilfoyle Trading Card" class="card-full-image">
                 </div>
 
-                <!-- Dinesh -->
-                <div class="team-card" data-character="dinesh">
-                    <div class="team-card-image">
+                <!-- Dinesh - Built Card -->
+                <div class="trading-card built-card" data-character="dinesh" style="--char-color: var(--color-dinesh)">
+                    <div class="card-header-label">TRES COMAS NUTRITION LABS // FOUNDING TEAM</div>
+                    <div class="card-portrait">
                         <img src="assets/characters/dinesh.png" alt="Dinesh Chugtai">
                     </div>
-                    <div class="team-card-content">
-                        <div class="team-card-name">Dinesh Chugtai</div>
-                        <div class="team-card-title">VP Engineering & Chief Sauce Architect (self-designated)</div>
-                        <div class="team-card-equity">8% equity // still negotiating</div>
-                        <div class="team-card-bio">Dinesh joined Tres Comas because Gilfoyle joined and Dinesh could not let Gilfoyle outrank him at another company. He has since become the lead architect of the Sauces & Dips vertical — which he calls "the most technically sophisticated module on the platform" and which everyone else calls "the sauce page." Gilfoyle has reviewed the sauce architecture and said it "doesn't have an exploitable attack surface," which Dinesh has framed.</div>
-                        <div class="team-card-quote">// "I'm the cool cousin. This is the cool company. Different in Pakistan."</div>
+                    <div class="card-divider"></div>
+                    <div class="card-stats">
+                        <div class="stat-row"><span class="stat-key">NAME</span><span class="stat-val">Dinesh Chugtai</span></div>
+                        <div class="stat-row"><span class="stat-key">TITLE</span><span class="stat-val">VP Engineering & Chief Sauce Architect*</span></div>
+                        <div class="stat-row"><span class="stat-key">EQUITY</span><span class="stat-val equity-val">8% // still negotiating</span></div>
+                        <div class="stat-row"><span class="stat-key">STATUS</span><span class="stat-val">LinkedIn: updated 17x this year</span></div>
+                        <div class="card-quote">// "I'm the cool cousin. It's different in Pakistan."</div>
                     </div>
+                    <div class="card-watermark">,,,</div>
                 </div>
 
-                <!-- Jared -->
-                <div class="team-card" data-character="jared">
-                    <div class="team-card-image">
+                <!-- Jared - Built Card -->
+                <div class="trading-card built-card" data-character="jared" style="--char-color: var(--color-jared)">
+                    <div class="card-header-label">TRES COMAS NUTRITION LABS // FOUNDING TEAM</div>
+                    <div class="card-portrait">
                         <img src="assets/characters/jared.png" alt="Jared Dunn">
                     </div>
-                    <div class="team-card-content">
-                        <div class="team-card-name">Donald "Jared" Dunn</div>
-                        <div class="team-card-title">COO & Chief Operational Optimist</div>
-                        <div class="team-card-equity">5% equity + soup break scheduling rights</div>
-                        <div class="team-card-bio">Jared joined because Richard needed someone to organize things and Jared has never said no to Richard about anything. He has since implemented 14 operational frameworks, 9 of which work. Jared maintains all nutrition documentation, schedules mandatory soup breaks, and wrote the Employee Handbook that only he has read. He once told a competitor "How would you like to die today, motherfucker" in a tone so pleasant they didn't realize what had happened until the drive home.</div>
-                        <div class="team-card-quote">// "I've pre-scheduled your soup breaks. 10am and 3pm. Non-optional."</div>
+                    <div class="card-divider"></div>
+                    <div class="card-stats">
+                        <div class="stat-row"><span class="stat-key">NAME</span><span class="stat-val">Donald "Jared" Dunn</span></div>
+                        <div class="stat-row"><span class="stat-key">TITLE</span><span class="stat-val">COO & Chief Operational Optimist</span></div>
+                        <div class="stat-row"><span class="stat-key">EQUITY</span><span class="stat-val equity-val">5% + soup break scheduling rights</span></div>
+                        <div class="stat-row"><span class="stat-key">STATUS</span><span class="stat-val">14 frameworks. 9 working.</span></div>
+                        <div class="card-quote">// "I was raised by the state. I find this clarifying."</div>
                     </div>
+                    <div class="card-watermark">,,,</div>
                 </div>
 
-                <!-- Big Head -->
-                <div class="team-card" data-character="bighead">
-                    <div class="team-card-image">
+                <!-- Big Head - Built Card -->
+                <div class="trading-card built-card" data-character="bighead" style="--char-color: var(--color-bighead)">
+                    <div class="card-header-label">TRES COMAS NUTRITION LABS // FOUNDING TEAM</div>
+                    <div class="card-portrait">
                         <img src="assets/characters/bighead.png" alt="Big Head">
                     </div>
-                    <div class="team-card-content">
-                        <div class="team-card-name">Nelson "Big Head" Bighetti</div>
-                        <div class="team-card-title">Co-Head Dreamer & Accidental Series B Lead Investor</div>
-                        <div class="team-card-equity">Series B lead // accidentally</div>
-                        <div class="team-card-bio">Big Head accidentally led the Tres Comas Series B when he mistook an $80M investment term sheet for a smoothie subscription form and clicked yes on everything. He was subsequently given the title "Co-Head Dreamer of Capital" — a board position the company invented specifically for him that carries voting rights nobody anticipated. He has a boat. He considers this his primary qualification.</div>
-                        <div class="team-card-quote">// "I'm not sure what I did to get this title but here we are."</div>
+                    <div class="card-divider"></div>
+                    <div class="card-stats">
+                        <div class="stat-row"><span class="stat-key">NAME</span><span class="stat-val">Nelson "Big Head" Bighetti</span></div>
+                        <div class="stat-row"><span class="stat-key">TITLE</span><span class="stat-val">Co-Head Dreamer of Capital*</span></div>
+                        <div class="stat-row"><span class="stat-key">EQUITY</span><span class="stat-val equity-val">Series B lead (accidentally)</span></div>
+                        <div class="stat-row"><span class="stat-key">STATUS</span><span class="stat-val">I just clicked yes on everything</span></div>
+                        <div class="card-quote">// "I have a boat. I guess that's not really a skill."</div>
                     </div>
+                    <div class="card-watermark">,,,</div>
                 </div>
 
-                <!-- Gavin Belson -->
-                <div class="team-card" data-character="gavin">
-                    <div class="team-card-image">
+                <!-- Gavin - Built Card -->
+                <div class="trading-card built-card" data-character="gavin" style="--char-color: var(--color-gavin)">
+                    <div class="card-header-label">TRES COMAS NUTRITION LABS // FOUNDING TEAM</div>
+                    <div class="card-portrait">
                         <img src="assets/characters/gavin.png" alt="Gavin Belson">
                     </div>
-                    <div class="team-card-content">
-                        <div class="team-card-name">Gavin Belson</div>
-                        <div class="team-card-title">Strategic Board Member (hostile investment, ongoing)</div>
-                        <div class="team-card-equity">Board seat (hostile)</div>
-                        <div class="team-card-bio">Gavin Belson joined the board following a failed $400M acquisition attempt, reasoning that if he could not acquire Tres Comas, he would "influence it from within until it was essentially Hooli anyway." He has proposed renaming the company "Hooli Nutrition" four times. He has been voted down four times. He considers this temporary. He has broken seven glasses at board meetings to date. He does not apologize.</div>
-                        <div class="team-card-quote">// "Consider the broccoli. It too began compressed. That is Hooli. That is greatness. Mind the glass."</div>
+                    <div class="card-divider"></div>
+                    <div class="card-stats">
+                        <div class="stat-row"><span class="stat-key">NAME</span><span class="stat-val">Gavin Belson</span></div>
+                        <div class="stat-row"><span class="stat-key">TITLE</span><span class="stat-val">Strategic Board Member (hostile)</span></div>
+                        <div class="stat-row"><span class="stat-key">EQUITY</span><span class="stat-val equity-val">6% preferred (temporary, per Gavin)</span></div>
+                        <div class="stat-row"><span class="stat-key">STATUS</span><span class="stat-val">Proposed "Hooli Nutrition" rename: 4x. Voted down: 4x.</span></div>
+                        <div class="card-quote">// "Consider the broccoli. Mind the glass."</div>
                     </div>
+                    <div class="card-watermark">,,,</div>
                 </div>
 
-                <!-- Monica Hall -->
-                <div class="team-card" data-character="monica">
-                    <div class="team-card-image">
+                <!-- Monica - Built Card -->
+                <div class="trading-card built-card" data-character="monica" style="--char-color: var(--color-monica)">
+                    <div class="card-header-label">TRES COMAS NUTRITION LABS // FOUNDING TEAM</div>
+                    <div class="card-portrait">
                         <img src="assets/characters/monica.png" alt="Monica Hall">
                     </div>
-                    <div class="team-card-content">
-                        <div class="team-card-name">Monica Hall</div>
-                        <div class="team-card-title">Board Member & Head of Adult Supervision</div>
-                        <div class="team-card-equity">Board seat (functional)</div>
-                        <div class="team-card-bio">Monica Hall joined the board after facilitating the Series A, having recognized that without her direct involvement the company would make several catastrophic decisions in rapid succession. She is the only board member who has read the financials, the only one who understands the Big Head voting situation, and the only person who has read the terms of the Russ Hanneman investment agreement. She has blocked four acquisition attempts and one Erlich proposal to "take the company public via vibes."</div>
-                        <div class="team-card-quote">// "This one actually works. Ships clean. No pivot required."</div>
+                    <div class="card-divider"></div>
+                    <div class="card-stats">
+                        <div class="stat-row"><span class="stat-key">NAME</span><span class="stat-val">Monica Hall</span></div>
+                        <div class="stat-row"><span class="stat-key">TITLE</span><span class="stat-val">Board Member & Head of Adult Supervision</span></div>
+                        <div class="stat-row"><span class="stat-key">EQUITY</span><span class="stat-val equity-val">0% (her choice — the wisest choice)</span></div>
+                        <div class="stat-row"><span class="stat-key">STATUS</span><span class="stat-val">Blocked: 4 acquisitions, 2 name changes, 1 IPO via vibes</span></div>
+                        <div class="card-quote">// "This one works. Ships clean. No pivot required."</div>
                     </div>
+                    <div class="card-watermark">,,,</div>
                 </div>
 
-                <!-- Jian-Yang -->
-                <div class="team-card" data-character="jianyang">
-                    <div class="team-card-image">
+                <!-- Jian-Yang - Built Card -->
+                <div class="trading-card built-card" data-character="jianyang" style="--char-color: var(--color-jianyang)">
+                    <div class="card-header-label">TRES COMAS NUTRITION LABS // FOUNDING TEAM</div>
+                    <div class="card-portrait">
                         <img src="assets/characters/jianyang.png" alt="Jian-Yang">
                     </div>
-                    <div class="team-card-content">
-                        <div class="team-card-name">Jian-Yang</div>
-                        <div class="team-card-title">Chief of Emerging Verticals (current version — subject to change)</div>
-                        <div class="team-card-equity">equity: disputed</div>
-                        <div class="team-card-bio">Jian-Yang's role at Tres Comas Nutrition Labs does not appear in any employment contract, board resolution, org chart, or cap table (though his equity is "disputed" — a word that appears in fourteen separate legal documents). He was present at the founding because he lived in the Hacker Hostel and the blender woke him up. He has since: contributed the Chipotle Salsa recipe, run a prank call campaign that generated 40,000 newsletter signups, and occupied Erlich's old office since the day Erlich left for Tibet.</div>
-                        <div class="team-card-quote">// "I never been trash."</div>
+                    <div class="card-divider"></div>
+                    <div class="card-stats">
+                        <div class="stat-row"><span class="stat-key">NAME</span><span class="stat-val">Jian-Yang</span></div>
+                        <div class="stat-row"><span class="stat-key">TITLE</span><span class="stat-val">Chief of Emerging Verticals (current version)</span></div>
+                        <div class="stat-row"><span class="stat-key">EQUITY</span><span class="stat-val equity-val">[DISPUTED] // see separate document</span></div>
+                        <div class="stat-row"><span class="stat-key">STATUS</span><span class="stat-val">Building SeeFood. Board rejected it. He continued.</span></div>
+                        <div class="card-quote">// "I never been trash."</div>
                     </div>
+                    <div class="card-watermark">,,,</div>
                 </div>
             </div>
 
@@ -1461,6 +1542,33 @@
             <div class="intro">
                 <h2>const <span class="function-name">pressRoom</span> = new PressRelease({</h2>
                 <p class="code-comment">// "All statements approved by Gavin. All statements overruled by Monica. Published anyway."</p>
+            </div>
+            <div class="section-watermark">,,,</div>
+
+            <!-- COMMA PROGRESS REPORT CARD -->
+            <div class="comma-progress-card">
+                <div class="cpc-header">// INVESTOR RELATIONS · COMMA PROGRESS REPORT</div>
+                <div class="cpc-grid">
+                    <div class="cpc-item achieved">
+                        <div class="cpc-comma">,</div>
+                        <div class="cpc-val">$1.2B</div>
+                        <div class="cpc-label">ACHIEVED ✓</div>
+                    </div>
+                    <div class="cpc-item pending">
+                        <div class="cpc-comma">,</div>
+                        <div class="cpc-val">$10B</div>
+                        <div class="cpc-label">OUTSTANDING ✗</div>
+                    </div>
+                    <div class="cpc-item pending">
+                        <div class="cpc-comma">,</div>
+                        <div class="cpc-val">$100B</div>
+                        <div class="cpc-label">OUTSTANDING ✗</div>
+                    </div>
+                </div>
+                <div class="cpc-russ-note">
+                    <img src="assets/characters/russ.png" alt="Russ">
+                    <span>"We are named TRES COMAS. We have achieved UNO COMA. I funded this company from a GLOVE COMPARTMENT and somehow we are underperforming my INVESTMENT THESIS. SCHWAAAAG." — R. Hanneman, Q3 Board Meeting</span>
+                </div>
             </div>
 
             <!-- Press Release 1 -->
@@ -1568,19 +1676,20 @@
                     <img class="press-avatar" src="assets/characters/richard.png" alt="Richard Hendricks">
                     <div class="press-header-content">
                         <div class="press-dateline">FOR IMMEDIATE RELEASE — Today</div>
-                        <div class="press-headline">TRES COMAS NUTRITION LABS LAUNCHES health-code v4.0</div>
+                        <div class="press-headline">TRES COMAS NUTRITION LABS LAUNCHES health-code v5.0</div>
                         <div class="press-preview">
-                            <span>"Middle-Out Macro Compression Protocol Now Features Character-Attributed Recipe Intelligence..."</span>
+                            <span>"Big Character Energy Edition — Middle-Out Macro Compression Protocol Now Features Trading Card Team..."</span>
                             <span class="press-expand">// expand()</span>
                         </div>
                     </div>
                 </div>
                 <div class="press-body">
-                    <p><strong>PALO ALTO, CA</strong> — Tres Comas Nutrition Labs today announced the release of health-code v4.0, the most significant update to the company's nutrition infrastructure platform since the v3.0 post-pivot release.</p>
-                    <p>New in v4.0: Character-attributed recipe intelligence with circular avatar illustrations for all ten founding team members, a full Team page featuring the complete Tres Comas founding story, an interactive Press Room with all five canonical press releases, and a full Tres Comas company identity layer applied to the Hacker Hostel's original nutrition protocol.</p>
-                    <p>The update was built in a single deployment session. "Zero dependencies. Zero hallucinations," CTO Gilfoyle confirmed. "The architecture is sound. As it always has been."</p>
-                    <p>Russ Hanneman's McLaren appears prominently on the Team page. "I paid for this with money from my glove compartment," Mr. Hanneman confirmed. "The doors are open. They open like THIS." He demonstrated the butterfly door gesture. Several journalists were present. None of them wrote it up correctly.</p>
-                    <p>The v4.0 update is live at the company's platform. Fork the repo. Customize your stack. "I own 10% of all forks." — E. Bachman</p>
+                    <p><strong>PALO ALTO, CA</strong> — Tres Comas Nutrition Labs today announced the release of health-code v5.0, the "Big Character Energy Edition" — the most significant visual hierarchy overhaul since the company emerged from stealth.</p>
+                    <p>New in v5.0: Full hero rebuild with three-band layout (brand bar, team panorama, comma deficit tracker), trading card format for all ten founding team members, section host panels in every recipe tab, comma ticker strip with live status updates, and the complete demotion of health-code branding to product subtitle status.</p>
+                    <p>"Tres Comas is now THE brand," CEO Richard Hendricks confirmed. "health-code is what we make. Tres Comas is who we are. I think. Actually — Monica, is that right?"</p>
+                    <p>The update includes four image-based trading cards (Russ, Erlich, Gilfoyle, Richard) and six HTML-built cards matching the trading card aesthetic. Russ Hanneman's card appears at full width at the top of the Team page. "That is where it belongs," Mr. Hanneman stated. "At the top. Of everything."</p>
+                    <p>The comma deficit tracker is now prominently displayed in the hero section, with one comma achieved and two outstanding. Mr. Hanneman has requested the tracker be removed until all three commas are achieved. The request was denied.</p>
+                    <p>The v5.0 update is live at the company's platform. Zero dependencies. Zero hallucinations. Full send.</p>
                     <div class="press-filed">// filed by The Tres Comas Engineering Team</div>
                     <span class="press-symbol">,,,</span>
                 </div>
@@ -1608,10 +1717,14 @@
             <p class="footer-signoff">// Acquired by your metabolism. Exit: TBD.</p>
             <p class="footer-signoff">// Making the world a better place, one smoothie at a time.</p>
             <p class="footer-signoff">// $1.2B valuation. Russ is disgusted. Richard is fine. (Medical.)</p>
+            <p class="footer-russ-deficit">// R. Hanneman valuation target: ,,,,,,,,, (9 commas)</p>
+            <p class="footer-russ-deficit">// Current status: , (1 comma)</p>
+            <p class="footer-russ-deficit">// Gap: ,,,,,,,, (8 commas) // "embarrassing" — R.H.</p>
             <div class="tech-stack">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>Vanilla JS</span>
+                <span>anime.js</span>
                 <span>🥷 Ninja Powered</span>
                 <span>🧪 Zero Dependencies</span>
                 <span style="color: var(--tc-gold);">,,,</span>
@@ -1657,4 +1770,3 @@ at 3am and which legal has been "reviewing" for 14 months.
     <script src="script.js"></script>
 </body>
 </html>
-
