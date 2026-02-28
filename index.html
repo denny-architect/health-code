@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- TODO: make the world a better place (Q3 milestone, deprioritized) -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health-Code 💪 | Optimized Nutrition Protocol v2.0</title>
+    <title>health-code 💪 | Pied Piper Nutrition Lab v3.0</title>
     
+    <!-- FIXME: work-life balance (low priority, closed as wontfix) -->
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Developer-friendly nutrition protocol with optimized smoothie recipes, soups, sauces, and frozen treats. 121g daily protein across 15+ recipe variants with complete shopping lists and daily schedules.">
-    <meta name="keywords" content="smoothie recipes, protein smoothies, nutrition protocol, healthy recipes, meal prep, fitness nutrition, developer health, high protein, pre workout, post workout">
-    <meta name="author" content="Denny Architect">
+    <meta name="description" content="Making the world a better place through middle-out macro compression. Pied Piper Nutrition Lab — Hacker Hostel, Palo Alto.">
+    <meta name="keywords" content="smoothie recipes, protein smoothies, nutrition protocol, healthy recipes, meal prep, fitness nutrition, developer health, high protein, pre workout, post workout, pied piper, silicon valley">
+    <meta name="author" content="Pied Piper Nutrition Lab">
     
+    <!-- NOTE: This protocol has achieved product-market fit. -->
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Health-Code | Optimized Nutrition Protocol v2.0">
-    <meta property="og:description" content="A tech-inspired nutrition protocol featuring optimized smoothie recipes, soups, and more for developers and athletes. ~121g daily protein made simple.">
+    <meta property="og:title" content="health-code | Pied Piper Nutrition Lab v3.0">
+    <meta property="og:description" content="Making the world a better place through middle-out macro compression. 121g daily protein via middle-out optimization.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://denny-architect.github.io/health-code/">
     
+    <!-- WARNING: May cause unsolicited optimization advice at daily standup. -->
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Health-Code | Optimized Nutrition Protocol v2.0">
-    <meta name="twitter:description" content="Developer-friendly smoothie recipes with ~121g daily protein. Tech-inspired design, zero dependencies.">
+    <meta name="twitter:title" content="health-code | Pied Piper Nutrition Lab v3.0">
+    <meta name="twitter:description" content="Making the world a better place through middle-out macro compression.">
     
+    <!-- PIVOT COMPLETE: from tired → wired ↗ -->
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
     
@@ -28,39 +33,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Spaces vs. Tabs: we use neither. We use blenders. -->
 </head>
 <body>
+    <!-- catch(burnout) { console.log("pivot to soups") } -->
+    <canvas id="particle-canvas"></canvas>
+    
     <header class="hero">
+        <!-- Running middle-out compression on your macros -->
         <div class="container">
+            <div class="hacker-hostel-stamp">
+                <span class="stamp-icon">⌂</span>
+                <span class="stamp-title">HACKER HOSTEL™</span>
+                <span class="stamp-location">Palo Alto, CA · Est. 2014</span>
+                <span class="stamp-tagline">"We're funded."</span>
+            </div>
+            
             <div class="logo">
                 <span class="bracket">&lt;</span>
                 <span class="brand">health<span class="dash">-</span>code</span>
                 <span class="bracket">/&gt;</span>
-                <span class="version-badge">v2.0</span>
+                <span class="version-badge">v3.0 <span class="version-sub">post-pivot</span></span>
             </div>
             <h1>Optimized Nutrition Protocol</h1>
-            <p class="tagline">// Two smoothies a day keeps the bugs away 🐛</p>
+            <p class="tagline" id="rotating-tagline">// "Two smoothies a day keeps the bugs away." — R. Hendricks (he already regrets saying it)</p>
+            
+            <!-- "You're funded." — electrolytes included, no VC required -->
             <div class="stats">
                 <div class="stat">
                     <span class="stat-value">~121g</span>
-                    <span class="stat-label">Daily Protein</span>
+                    <span class="stat-label">Daily Active Macros</span>
+                    <span class="stat-comment">// pre-revenue. intentional.</span>
                 </div>
                 <div class="stat">
                     <span class="stat-value">15+</span>
-                    <span class="stat-label">Recipe Variants</span>
+                    <span class="stat-label">SKUs in Pipeline</span>
+                    <span class="stat-comment">// achieving product-market fit</span>
                 </div>
                 <div class="stat">
                     <span class="stat-value">4</span>
-                    <span class="stat-label">Categories</span>
+                    <span class="stat-label">Vertical Markets</span>
+                    <span class="stat-comment">// disrupting all of them</span>
                 </div>
                 <div class="stat glow-stat">
-                    <span class="stat-value">🏋️</span>
-                    <span class="stat-label">Pre/Post Workout</span>
+                    <span class="stat-value">⚡</span>
+                    <span class="stat-label">Minimum Viable Protein™</span>
+                    <span class="stat-comment">// Founder Mode activated</span>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Optimal Tip-to-Tip Efficiency™ applied to macro distribution -->
     <nav class="nav-tabs">
         <div class="container">
             <button class="tab active" data-tab="smoothies">🥤 Smoothies</button>
@@ -70,15 +94,18 @@
         </div>
     </nav>
 
+    <!-- Three Macro Club: protein + carbs + fat. No three-comma requirement. -->
     <main class="container">
         <!-- SMOOTHIES TAB -->
         <section id="smoothies" class="tab-content active">
             <div class="intro">
                 <h2>function <span class="function-name">blendSmoothie</span>() {</h2>
-                <p class="code-comment">// Select your smoothie, choose pre or post workout mode 🚀</p>
+                <p class="code-comment">// MVP: Minimum Viable Protein — select pre or post workout mode 🚀</p>
             </div>
 
-            <!-- CITRUS SUNRISE -->
+            <!-- Big Head: achieved this architecture by doing absolutely nothing. Inspiration to us all. -->
+
+            <!-- CITRUS SUNRISE - ERLICH BACHMAN -->
             <article class="recipe-card">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=pDDg4QIZSo8IBDeLB1FPTimKCjefHyBR05eCccts0XTldtee7GtvBOZnUYCAylsMtR4SR8y%2BDYxLjoICJncILmd277vNpzFG31tvXShk53ZcP1WZ416%2BMODC%2FHHJD%2B%2Bd9mcjqCjdwr4cA0iMo%2FB3v723t8PSoFakQIvOvWpy1ZtY23803mJYSeMOi8yldU0xy3dUCeyLimsXcA6d1U2eJMXXJZb9nazkgQRWYLUr&u2=fRBIiYQmwWtrS3V6&width=2560" alt="Citrus Sunrise" class="recipe-image">
@@ -88,9 +115,22 @@
                     </div>
                 </div>
                 
+                <!-- Character Comment Block - Erlich Bachman -->
+                <div class="character-comment" data-character="erlich">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "I own 10% of this smoothie. You're welcome."</span>
+                        <span class="comment-line">// "This achieved TechCrunch Disrupt Finalist status. The judges</span>
+                        <span class="comment-line">//  had excellent taste. Obviously. I coached them."</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">🧔</span>
+                        <span class="char-name">— E. Bachman, Incubator Owner & 10% Stakeholder</span>
+                    </div>
+                </div>
+                
                 <div class="recipe-versions">
                     <div class="version">
-                        <h4>⚡ Pre-Workout (1 PM) <span class="badge badge-pre">~33g protein</span></h4>
+                        <h4>⚡ v1.0 — Minimum Viable Protein (1 PM) <span class="badge badge-pre">~33g protein</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -109,7 +149,7 @@
                     </div>
 
                     <div class="version">
-                        <h4>💪 Post-Workout (5 PM) <span class="badge badge-post">~48g protein</span></h4>
+                        <h4>💪 v2.0 — Scale Mode (5 PM) <span class="badge badge-post">~48g protein</span> <span class="recovery-comment">// this guy recovers</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -129,7 +169,9 @@
                 </div>
             </article>
 
-            <!-- STRAWBERRY FIELDS -->
+            <!-- Gilfoyle has reviewed the circulatory system's networking protocol. He said nothing. That means it's fine. -->
+
+            <!-- STRAWBERRY FIELDS - RICHARD HENDRICKS -->
             <article class="recipe-card">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=nxWaT0iGYIS7WLKDKIyYYLQV0PXjX0M3sm%2FTcjszlPddYtP7V9IirL9DIL9qtlDxd92wbejDKHcNPVxuG08HTNc5O4NASRdLVFFR0hXLNFAFEbDvCogF1crMTGejjbTbndfDaxL4w3Fa5aUiS4qP9qmQmU1n6lE%3D&u2=NkHAGdOLqjC%2FvJj%2F&width=2560" alt="Strawberry Fields" class="recipe-image">
@@ -139,9 +181,22 @@
                     </div>
                 </div>
                 
+                <!-- Character Comment Block - Richard Hendricks -->
+                <div class="character-comment" data-character="richard">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// if (stressLevel > threshold) { vomit(); pivot(); blend(); }</span>
+                        <span class="comment-line">// "I mean... it's good. I think it's good. Sorry. It's</span>
+                        <span class="comment-line">//  definitely good. The compression ratio on the macros is—"</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">😰</span>
+                        <span class="char-name">— R. Hendricks, CEO (he's already regretting the pivot)</span>
+                    </div>
+                </div>
+                
                 <div class="recipe-versions">
                     <div class="version">
-                        <h4>⚡ Pre-Workout (1 PM) <span class="badge badge-pre">~33g protein</span></h4>
+                        <h4>⚡ v1.0 — Minimum Viable Protein (1 PM) <span class="badge badge-pre">~33g protein</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -159,7 +214,7 @@
                     </div>
 
                     <div class="version">
-                        <h4>💪 Post-Workout (5 PM) <span class="badge badge-post">~48g protein</span></h4>
+                        <h4>💪 v2.0 — Scale Mode (5 PM) <span class="badge badge-post">~48g protein</span> <span class="recovery-comment">// this guy recovers</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -178,7 +233,9 @@
                 </div>
             </article>
 
-            <!-- BLUEBERRY BLAST -->
+            <!-- if (hunger > 0) { return this.pivot('soups') } -->
+
+            <!-- BLUEBERRY BLAST - GILFOYLE -->
             <article class="recipe-card">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=wv%2BEbYwjpClsFQsXcdyvvTso%2B5m9%2FPCyTV6Mc8Mt4Itdbt%2F3AKlW3BJbX1sn90tF6BGo2dxTnSF8iWxbN63%2FOhtGLyOnssLAeEUzH2JM3yuMwiVvSPQlPiMvhhp6%2FKErw67VQ2iwV%2FXk1ky5op8Wyw%3D%3D&u2=12aArQVqnQiYTFEd&width=2560" alt="Blueberry Blast" class="recipe-image">
@@ -188,9 +245,22 @@
                     </div>
                 </div>
                 
+                <!-- Character Comment Block - Gilfoyle -->
+                <div class="character-comment" data-character="gilfoyle">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// Reviewed the dependency graph at 3am. It's architecturally</span>
+                        <span class="comment-line">// sound. Unlike your last three startups.</span>
+                        <span class="comment-line">// I don't need your approval. The antioxidants don't either.</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">😑</span>
+                        <span class="char-name">— B. Gilfoyle, Systems Architecture & Nutrition Security</span>
+                    </div>
+                </div>
+                
                 <div class="recipe-versions">
                     <div class="version">
-                        <h4>⚡ Pre-Workout (1 PM) <span class="badge badge-pre">~33g protein</span></h4>
+                        <h4>⚡ v1.0 — Minimum Viable Protein (1 PM) <span class="badge badge-pre">~33g protein</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -209,7 +279,7 @@
                     </div>
 
                     <div class="version">
-                        <h4>💪 Post-Workout (5 PM) <span class="badge badge-post">~48g protein</span></h4>
+                        <h4>💪 v2.0 — Scale Mode (5 PM) <span class="badge badge-post">~48g protein</span> <span class="recovery-comment">// this guy recovers</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -229,7 +299,9 @@
                 </div>
             </article>
 
-            <!-- WATERMELON QUENCH - NEW FROM NINJA -->
+            <!-- "I don't want to live in a world where someone else makes the world a better place better than we do." — G. Belson -->
+
+            <!-- WATERMELON QUENCH - RUSS HANNEMAN -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=3c7Jr3oXgnO6F6dj74Ave4gwMN%2FccQ1noQIC3WPYoX3hhuNqAoUXR%2FPK8F9lFdI%2BfBQC9ZPprUsK%2B1aFdQ2tvYzABza37MVESdW8aVcFcRl%2FFIsiBrE0wITeain5E0TaZwixAiZD4UBdnro9c61CwvWRhoelCBDse0tAi%2BZ5SdoU&u2=vJ%2BUj3vCOfZ9fMwZ&width=2560" alt="Watermelon Quench" class="recipe-image">
@@ -240,9 +312,23 @@
                     </div>
                 </div>
                 
+                <!-- Character Comment Block - Russ Hanneman -->
+                <div class="character-comment" data-character="russ">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// SCHWAAAAG 🤙</span>
+                        <span class="comment-line">// "You know what has three commas? A billion dollars.</span>
+                        <span class="comment-line">//  You know what else? This flavor profile, bro."</span>
+                        <span class="comment-line">// ROI = Refreshment On Investment. Do the math.</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">🕶️</span>
+                        <span class="char-name">— R. Hanneman, Three Comma Club · Tres Comas</span>
+                    </div>
+                </div>
+                
                 <div class="recipe-versions">
                     <div class="version">
-                        <h4>⚡ Pre-Workout <span class="badge badge-pre">Hydration Focus</span></h4>
+                        <h4>⚡ v1.0 — Minimum Viable Protein (1 PM) <span class="badge badge-pre">Hydration Focus</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -259,7 +345,7 @@
                     </div>
 
                     <div class="version">
-                        <h4>💪 Post-Workout <span class="badge badge-post">Recovery Mode</span></h4>
+                        <h4>💪 v2.0 — Scale Mode (5 PM) <span class="badge badge-post">Recovery Mode</span> <span class="recovery-comment">// this guy recovers</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -277,7 +363,9 @@
                 </div>
             </article>
 
-            <!-- ISLAND SUNRISE SMOOTHIE - NEW FROM NINJA -->
+            <!-- This smoothie is 100% open source. Fork responsibly. -->
+
+            <!-- ISLAND SUNRISE - MONICA -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=tNukV1s2%2BRnjddJt7UMABJd9dS9CS%2FPLlAYJ89WMj2ErD9KW2X%2FDRkkEOCIjQxFvXfK8bldiNWJr%2FnKt4m96RFmSCB50Nc9TWY7f6xbU6jnjg2ufXJt2UEkDwt%2F2h3jL4DUb%2FNzwGZCDss5r&u2=KoN6fk8fuJ8YNCNj&width=2560" alt="Island Sunrise Smoothie" class="recipe-image">
@@ -288,9 +376,22 @@
                     </div>
                 </div>
                 
+                <!-- Character Comment Block - Monica -->
+                <div class="character-comment" data-character="monica">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "This one actually works. I've reviewed the ingredients.</span>
+                        <span class="comment-line">//  The electrolyte balance is sound. Ship it."</span>
+                        <span class="comment-line">// Unlike most things at this company, this is ready.</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">🙂</span>
+                        <span class="char-name">— M. Hall, The Only Adult In The Room</span>
+                    </div>
+                </div>
+                
                 <div class="recipe-versions">
                     <div class="version">
-                        <h4>⚡ Pre-Workout <span class="badge badge-pre">Energy Mode</span></h4>
+                        <h4>⚡ v1.0 — Minimum Viable Protein (1 PM) <span class="badge badge-pre">Energy Mode</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -308,7 +409,7 @@
                     </div>
 
                     <div class="version">
-                        <h4>💪 Post-Workout <span class="badge badge-post">Recovery Mode</span></h4>
+                        <h4>💪 v2.0 — Scale Mode (5 PM) <span class="badge badge-post">Recovery Mode</span> <span class="recovery-comment">// this guy recovers</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -327,7 +428,9 @@
                 </div>
             </article>
 
-            <!-- BANANA MOCHA ALMOND - NEW FROM NINJA -->
+            <!-- MCP: Meal Context Protocol v1.0 — deployed to production -->
+
+            <!-- BANANA MOCHA ALMOND - JARED (DONALD) -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=7geYeWWVQvUvjniY0bZg4SAQXHvafpatpnBZ5K60gZYFROd%2Fu0ti9mEsmOh6Hs3EQKGcvz4WN43ICWvqFJXOeEb5neSF9fH8zh7hZZg4hEzQaxcmriYAOe3DGMaEzXQ517vrFUsviyek%2B8NqIyZtAKthxG6fNFrwzrQ7d7U%3D&u2=B3HHmqgBai7QQMl7&width=2560" alt="Banana Mocha Almond" class="recipe-image">
@@ -338,9 +441,22 @@
                     </div>
                 </div>
                 
+                <!-- Character Comment Block - Jared (Donald) -->
+                <div class="character-comment" data-character="jared">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "The coffee reminds me of the one warm meal I was given</span>
+                        <span class="comment-line">//  on Tuesdays at the group home. It's good to laugh."</span>
+                        <span class="comment-line">// I've optimized the workflow. We start at 6am. Yoga optional.</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">🤓</span>
+                        <span class="char-name">— J. Dunn (Donald), COO & Surprisingly Dangerous When Cornered</span>
+                    </div>
+                </div>
+                
                 <div class="recipe-versions">
                     <div class="version">
-                        <h4>⚡ Pre-Workout <span class="badge badge-pre">Caffeine Power</span></h4>
+                        <h4>⚡ v1.0 — Minimum Viable Protein (1 PM) <span class="badge badge-pre">Caffeine Power</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -361,7 +477,7 @@
                     </div>
 
                     <div class="version">
-                        <h4>💪 Post-Workout <span class="badge badge-post">Recovery Mocha</span></h4>
+                        <h4>💪 v2.0 — Scale Mode (5 PM) <span class="badge badge-post">Recovery Mocha</span> <span class="recovery-comment">// this guy recovers</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -383,7 +499,9 @@
                 </div>
             </article>
 
-            <!-- TROPICAL CHILL - NEW FROM NINJA -->
+            <!-- RLBF: Reinforcement Learning from Bodily Feedback -->
+
+            <!-- TROPICAL CHILL - DINESH -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=qiJ6EVXuehYnpQHWX0caRR3dgSEaZAFAUQ6m1d%2F2y%2BVtRX8gtavkE8oayNCrzoXtJkYiiNeVNj8hHNNcmIMNlcUhUO8TqYqUHhbWDkaVaoIVg8qdZGYvl2mJHQ1%2FhEx5raW0hmU2ks9HwJvqCKr%2FVxZcGs96LDZc&u2=k08MDzIrYMHdGLCW&width=2560" alt="Tropical Chill" class="recipe-image">
@@ -394,9 +512,23 @@
                     </div>
                 </div>
                 
+                <!-- Character Comment Block - Dinesh -->
+                <div class="character-comment" data-character="dinesh">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// if (gilfoyle.approves(this)) { this.confidence = 0; }</span>
+                        <span class="comment-line">// // ^ he never approves. this recipe is still good.</span>
+                        <span class="comment-line">// "I'm the cool cousin. This is the cool smoothie.</span>
+                        <span class="comment-line">//  It's different in Pakistan."</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">🇵🇰</span>
+                        <span class="char-name">— D. Chugtai, Backend · Trying Very Hard</span>
+                    </div>
+                </div>
+                
                 <div class="recipe-versions">
                     <div class="version">
-                        <h4>⚡ Pre-Workout <span class="badge badge-pre">Light Energy</span></h4>
+                        <h4>⚡ v1.0 — Minimum Viable Protein (1 PM) <span class="badge badge-pre">Light Energy</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -416,7 +548,7 @@
                     </div>
 
                     <div class="version">
-                        <h4>💪 Post-Workout <span class="badge badge-post">Tropical Recovery</span></h4>
+                        <h4>💪 v2.0 — Scale Mode (5 PM) <span class="badge badge-post">Tropical Recovery</span> <span class="recovery-comment">// this guy recovers</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -437,7 +569,9 @@
                 </div>
             </article>
 
-            <!-- CINNAMON COFFEE SMOOTHIE - NEW FROM NINJA -->
+            <!-- Training run complete. Loss: minimal. Gains: significant. -->
+
+            <!-- CINNAMON COFFEE - BIG HEAD -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=Q665jBBAMV8C5MiDe%2BtKRDjf79vKCNba3FyQvHNwuVpamxsnrEequTE1fMTnBnQZ%2FhnLXrZk%2F9YNdazZTF7lNV9cm%2BdMhYW0suISZ5Q%2F0prww%2Bj7BkNMFEQcPSVaGwgALlUlQ0IPQtECrTfU7anvjbc2Pdlh7fn7GYaJlebayivX0YpsWAl3%2Bet65qMvgrX8N1F88%2FESIPw6Ga7VwO%2BwB1mKwKGyX3wKnzgrjThxcrCy7cV0vG8nN4a08%2BA2a72zW10sAAyWnttOf7pTWzWKwsgP&u2=qKSJ0o%2B%2ByA64EMFy&width=2560" alt="Cinnamon Coffee Smoothie" class="recipe-image">
@@ -448,9 +582,22 @@
                     </div>
                 </div>
                 
+                <!-- Character Comment Block - Big Head -->
+                <div class="character-comment" data-character="bighead">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "I'm not sure what I did to get credit for this recipe,</span>
+                        <span class="comment-line">//  but here we are. It's really good though."</span>
+                        <span class="comment-line">// Appointed 'Co-Head Dreamer of Smoothies' — Hooli, 2019</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">☁️</span>
+                        <span class="char-name">— N. Bighetti, Co-Head Dreamer · Failing Upward Since 2014</span>
+                    </div>
+                </div>
+                
                 <div class="recipe-versions">
                     <div class="version">
-                        <h4>⚡ Pre-Workout <span class="badge badge-pre">Morning Fuel</span></h4>
+                        <h4>⚡ v1.0 — Minimum Viable Protein (1 PM) <span class="badge badge-pre">Morning Fuel</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -470,7 +617,7 @@
                     </div>
 
                     <div class="version">
-                        <h4>💪 Post-Workout <span class="badge badge-post">Dessert Recovery</span></h4>
+                        <h4>💪 v2.0 — Scale Mode (5 PM) <span class="badge badge-post">Dessert Recovery</span> <span class="recovery-comment">// this guy recovers</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -490,7 +637,9 @@
                 </div>
             </article>
 
-            <!-- STRAWBERRY BANANA CLASSIC - NEW FROM NINJA -->
+            <!-- // Vibe-coded by a 10x engineer on 2 smoothies and zero sleep -->
+
+            <!-- STRAWBERRY BANANA - JIAN-YANG -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=WWfZGJieljeuR%2Bc43%2FfL55uZ5sb2SPIf%2F%2Bx65oo%2BbPQVF8oIGkul9x4BD%2Bh7ZEFJad4aZSsOa4n27PEjzHfZds4eOkGJhB0Cs%2BZEzrKXKlIHvQy8vblOO34jN8gpYKlC59nzOxIXf5WAx6KwazGoOGEjxy1I6f8%3D&u2=4RHI5vRphW2ypQo0&width=2560" alt="Strawberry Banana Smoothie" class="recipe-image">
@@ -501,9 +650,21 @@
                     </div>
                 </div>
                 
+                <!-- Character Comment Block - Jian-Yang -->
+                <div class="character-comment" data-character="jianyang">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "I never been trash."</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">🐱</span>
+                        <span class="char-name">— Jian-Yang</span>
+                        <span class="char-editor-note">(Editor's note: he's right. This recipe is excellent.)</span>
+                    </div>
+                </div>
+                
                 <div class="recipe-versions">
                     <div class="version">
-                        <h4>⚡ Pre-Workout <span class="badge badge-pre">Classic Energy</span></h4>
+                        <h4>⚡ v1.0 — Minimum Viable Protein (1 PM) <span class="badge badge-pre">Classic Energy</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -521,7 +682,7 @@
                     </div>
 
                     <div class="version">
-                        <h4>💪 Post-Workout <span class="badge badge-post">Protein Classic</span></h4>
+                        <h4>💪 v2.0 — Scale Mode (5 PM) <span class="badge badge-post">Protein Classic</span> <span class="recovery-comment">// this guy recovers</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -540,7 +701,9 @@
                 </div>
             </article>
 
-            <!-- SUNSET SMOOTHIE - NEW FROM NINJA -->
+            <!-- context_window: stomach_capacity_bytes = Infinity -->
+
+            <!-- SUNSET SMOOTHIE - GAVIN BELSON -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=OZjla5IBLnh7BABTF2NN%2B92dB%2FblHv4EhQUNvLTVQVOaMdtSDMOmeLTyExAmV%2BEjSyoSiSjoH9JNII4URKR4uEHTTR5zDQ%2FIDWwjzZw89S%2B9A4gRr7e8f3AqZRvAiEt%2BaEwz7f50H9HSkFurHeFY&u2=GjnVOeS%2F3bl5GKRX&width=2560" alt="Sunset Smoothie" class="recipe-image">
@@ -551,9 +714,24 @@
                     </div>
                 </div>
                 
+                <!-- Character Comment Block - Gavin Belson -->
+                <div class="character-comment" data-character="gavin">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "Consider the mango. It begins compressed, hard, unrefined.</span>
+                        <span class="comment-line">//  Through heat and time it becomes... optimized. That is Hooli.</span>
+                        <span class="comment-line">//  That is this smoothie. That is greatness."</span>
+                        <span class="comment-line">// "I don't want to live in a world where someone else blends</span>
+                        <span class="comment-line">//  their smoothie better than we do." · Mind the glass.</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">👔</span>
+                        <span class="char-name">— G. Belson, CEO Hooli · Making Smoothies A Better Place</span>
+                    </div>
+                </div>
+                
                 <div class="recipe-versions">
                     <div class="version">
-                        <h4>⚡ Pre-Workout <span class="badge badge-pre">Vitamin C Blast</span></h4>
+                        <h4>⚡ v1.0 — Minimum Viable Protein (1 PM) <span class="badge badge-pre">Vitamin C Blast</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -570,7 +748,7 @@
                     </div>
 
                     <div class="version">
-                        <h4>💪 Post-Workout <span class="badge badge-post">Recovery Sunset</span></h4>
+                        <h4>💪 v2.0 — Scale Mode (5 PM) <span class="badge badge-post">Recovery Sunset</span> <span class="recovery-comment">// this guy recovers</span></h4>
                         <div class="ingredients">
                             <code>
 {
@@ -594,14 +772,16 @@
             </div>
         </section>
 
+        <!-- RAG: Retrieval-Augmented Gut-health -->
+
         <!-- SOUPS TAB -->
         <section id="soups" class="tab-content">
             <div class="intro">
-                <h2>function <span class="function-name">cookSoup</span>() {</h2>
-                <p class="code-comment">// Warm up with these nutrient-dense soups 🍲</p>
+                <h2>function <span class="function-name">warmDeploy</span>() {</h2>
+                <p class="code-comment">// Consider the broth. Nutrient-dense. Warm. Inevitable. — G. Belson</p>
             </div>
 
-            <!-- BROCCOLI CHEDDAR SOUP -->
+            <!-- BROCCOLI CHEDDAR SOUP - GAVIN BELSON -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=yLqrMbaihoJx3x%2FHVnfHUIedDVjO62YavK9PAUMlS6YIM6Wtn0%2B7vCxcs2rKX5FIWFc8V5%2B5XeuWNtmM57XAtniEwm44uGOGzsgelew3k7GSABSw7cwZT1BufkDa8tcMleexX94ggm9wreZDjEU5TSlSQUvO6H2f4%2BdYg7aldiB1&u2=ggsW1%2BHkdOHzjwJz&width=2560" alt="Broccoli Cheddar Soup" class="recipe-image">
@@ -609,6 +789,20 @@
                         <span class="ninja-badge">🥷 NINJA</span>
                         <h3>🥦 BROCCOLI CHEDDAR SOUP</h3>
                         <p class="recipe-tagline">const comfort = { cheese: <span class="string">'cheddar'</span>, veggies: <span class="string">'broccoli'</span>, warmth: <span class="keyword">MAX</span> };</p>
+                    </div>
+                </div>
+                
+                <!-- Character Comment Block - Gavin Belson -->
+                <div class="character-comment" data-character="gavin">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "Consider the broccoli. It grows in darkness.</span>
+                        <span class="comment-line">//  It is compressed. It emerges, transformed, optimized.</span>
+                        <span class="comment-line">//  Hooli Nutrition would have done this first. We still might."</span>
+                        <span class="comment-line">// "Mind the glass."</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">👔</span>
+                        <span class="char-name">— G. Belson, CEO Hooli · Constructing Elegant Soups For Maximum Nutritional Reuse And Extensibility</span>
                     </div>
                 </div>
                 
@@ -651,7 +845,7 @@
                 </div>
             </article>
 
-            <!-- BUTTERNUT SQUASH SOUP -->
+            <!-- BUTTERNUT SQUASH SOUP - BIG HEAD -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=29JcBPF5GZixmpHfgJil5wbwACbL6chgnpzYqeqVSdRvUDgRh1tQZhazend3SOERh2Hz%2Buo%2BELOqV3ePiVvZEeHU1KTV%2Bz31VnxaQOtnYWQs9ZzfoDS6K6HKLMqoSaHtTYiazxNp1tRdl2y%2FQxM%3D&u2=htDrHG1MSfZ6ExFT&width=2560" alt="Butternut Squash Soup" class="recipe-image">
@@ -659,6 +853,19 @@
                         <span class="ninja-badge">🥷 NINJA</span>
                         <h3>🎃 BUTTERNUT SQUASH SOUP</h3>
                         <p class="recipe-tagline">const autumn = butternut.roast().blend({ texture: <span class="string">'velvety'</span> });</p>
+                    </div>
+                </div>
+                
+                <!-- Character Comment Block - Big Head -->
+                <div class="character-comment" data-character="bighead">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "I've had this soup a bunch of times and people always say</span>
+                        <span class="comment-line">//  it's really good. I don't know what I put in it."</span>
+                        <span class="comment-line">// I have a boat. I guess that's not really a skill.</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">☁️</span>
+                        <span class="char-name">— N. Bighetti, VP of Soups (self-appointed, unchallenged)</span>
                     </div>
                 </div>
                 
@@ -704,7 +911,7 @@
                 </div>
             </article>
 
-            <!-- PEP IN YOUR STEP SOUP -->
+            <!-- PEP IN YOUR STEP SOUP - JARED -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=cjwjKHb6OMZKCZyMOcjXIMurHxb72lF8IRBhFpa7MX0q%2BwoC6fOtn5Lr6bwRDAdZ7MeUv7pasWjEbLSdD9azusjEFRq4XYJIIy%2F3k3K69beXZWqSD6W0T%2FpmPRsO1Y%2FYEkzZ&u2=YLqoxCxVLnpJHRxd&width=2560" alt="Pep In Your Step Soup" class="recipe-image">
@@ -712,6 +919,19 @@
                         <span class="ninja-badge">🥷 NINJA</span>
                         <h3>🌶️ PEP IN YOUR STEP SOUP</h3>
                         <p class="recipe-tagline">function energize() { return peppers.roast().blend({ energy: <span class="keyword">HIGH</span> }); }</p>
+                    </div>
+                </div>
+                
+                <!-- Character Comment Block - Jared -->
+                <div class="character-comment" data-character="jared">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "The red peppers remind me of something hopeful.</span>
+                        <span class="comment-line">//  I can't explain it. I found the recipe in a parking lot."</span>
+                        <span class="comment-line">// I've pre-scheduled your soup breaks. 10am and 3pm. Non-optional.</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">🤓</span>
+                        <span class="char-name">— J. Dunn (Donald), COO · I Was Raised By The State And I Am Not Afraid To Catch A Case</span>
                     </div>
                 </div>
                 
@@ -759,11 +979,11 @@
         <!-- SAUCES & DIPS TAB -->
         <section id="sauces" class="tab-content">
             <div class="intro">
-                <h2>function <span class="function-name">makeSauce</span>() {</h2>
-                <p class="code-comment">// Elevate your meals with these sauces and dips 🌶️</p>
+                <h2>const <span class="function-name">sideEffects</span> = [</h2>
+                <p class="code-comment">// positive externalities only. no regressions detected.</p>
             </div>
 
-            <!-- SUN-DRIED TOMATO SAUCE -->
+            <!-- SUN-DRIED TOMATO SAUCE - DINESH -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=%2FGXwzwGMJo%2FMH4fKv3YgZdP5V7Nsrw5DinX4v9Bic10efz%2BUUqccrcrsQDp%2BnwZTiKDT8aXrq99CJ6HPf1oiCp%2Bkoc8QER90iiMm9SOGOSJ%2BEFAbSKoIDJNA84S8oSKDh3S1hSiW7swXhu9gziBi6tx8UTeez2Rf4nZKaEhBYUSNYuURrNjGaTY%3D&u2=rtobsKYfLw7la5RQ&width=2560" alt="Sun-Dried Tomato Sauce" class="recipe-image">
@@ -771,6 +991,19 @@
                         <span class="ninja-badge">🥷 NINJA</span>
                         <h3>🍅 SUN-DRIED TOMATO SAUCE</h3>
                         <p class="recipe-tagline">const italiano = tomatoes.sundry().blend({ basil: <span class="keyword">fresh</span> });</p>
+                    </div>
+                </div>
+                
+                <!-- Character Comment Block - Dinesh -->
+                <div class="character-comment" data-character="dinesh">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// Gilfoyle said my sauce "doesn't have an exploitable attack</span>
+                        <span class="comment-line">// surface." For him, that's basically a Michelin star.</span>
+                        <span class="comment-line">// I'll take it.</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">🇵🇰</span>
+                        <span class="char-name">— D. Chugtai, Backend & Unsolicited Sauce Architect</span>
                     </div>
                 </div>
                 
@@ -811,7 +1044,7 @@
                 </div>
             </article>
 
-            <!-- CHIPOTLE SALSA -->
+            <!-- CHIPOTLE SALSA - GILFOYLE -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=AHMehsHJQizx2qfJEuEsEt1TVxBMwSpS8RhAtYxUMrE%2FeTt0rGOSceoQyEi64RxhcMKfHCmex487%2Bddd07jiWU0wPqgMEgOOMlyNq5KKaBninXnTV10xACUp%2BRpxCiBfqDz52UgT8DHC5uCb&u2=6E9MyeExa0G4JveF&width=2560" alt="Chipotle Salsa" class="recipe-image">
@@ -819,6 +1052,19 @@
                         <span class="ninja-badge">🥷 NINJA</span>
                         <h3>🔥 CHIPOTLE SALSA</h3>
                         <p class="recipe-tagline">try { salsa.spice(<span class="string">'chipotle'</span>) } catch(mild) { addMore(); }</p>
+                    </div>
+                </div>
+                
+                <!-- Character Comment Block - Gilfoyle -->
+                <div class="character-comment" data-character="gilfoyle">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// Reviewed. Approved. Zero dependencies. Zero false positives.</span>
+                        <span class="comment-line">// The chipotle creates a threat surface. That's intentional.</span>
+                        <span class="comment-line">// This is what security tastes like.</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">😑</span>
+                        <span class="char-name">— B. Gilfoyle, Systems Architecture · Citizen of the World (Canadian. Allegedly. Checks made out to cash or Bitcoin.)</span>
                     </div>
                 </div>
                 
@@ -858,7 +1104,7 @@
             </article>
 
             <div class="code-block">
-                <p>}</p>
+                <p>];</p>
                 <p class="code-comment">// return flavor.amplified; 🌶️</p>
             </div>
         </section>
@@ -866,11 +1112,11 @@
         <!-- FROZEN TREATS TAB -->
         <section id="frozen" class="tab-content">
             <div class="intro">
-                <h2>function <span class="function-name">freezeTreat</span>() {</h2>
-                <p class="code-comment">// Cool down with these healthy frozen desserts 🍦</p>
+                <h2>async function <span class="function-name">cooldown</span>() {</h2>
+                <p class="code-comment">// post-sprint recovery protocol. await results;</p>
             </div>
 
-            <!-- WATERMELON MINT GRANITA -->
+            <!-- WATERMELON MINT GRANITA - MONICA -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=6%2B5MReUG9QPbysLPIGAcBdbSccG7Ggis%2BvpZNw5iRhJlCoMxyZp9bGj0e0IPgDrjYus6uNqJofCncLuPmNS8tg4aGRWHkj92Tp%2BR5t3wQcp6vg%3D%3D&u2=DHIXTiic%2BchlDneU&width=2560" alt="Watermelon Mint Granita" class="recipe-image">
@@ -878,6 +1124,19 @@
                         <span class="ninja-badge">🥷 NINJA</span>
                         <h3>🍉 WATERMELON MINT GRANITA</h3>
                         <p class="recipe-tagline">const summer = watermelon.freeze({ style: <span class="string">'Italian'</span>, mint: <span class="keyword">fresh</span> });</p>
+                    </div>
+                </div>
+                
+                <!-- Character Comment Block - Monica -->
+                <div class="character-comment" data-character="monica">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "Look. I've reviewed everything and this one is genuinely</span>
+                        <span class="comment-line">//  good. No notes. I can't believe I'm saying that."</span>
+                        <span class="comment-line">// Ships clean. No pivot required.</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">🙂</span>
+                        <span class="char-name">— M. Hall, The Only One Who Actually Read The Prospectus</span>
                     </div>
                 </div>
                 
@@ -914,7 +1173,7 @@
                 </div>
             </article>
 
-            <!-- FROZEN STRAWBERRY PEACH TREAT -->
+            <!-- FROZEN STRAWBERRY PEACH - RICHARD -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=lEpqg5AObLgL2HQX7KAoWRrhuEIV2zUbquDBVFV%2BYCNCoLUwFOeTWwJ4ZX80aBs5tYnRZpy16sJq%2Bc%2FgDnUXxdwJ0Bl3vi%2FefmjLFrcOr5NbG2Cz&u2=cCSKUeSpudiIeMZN&width=2560" alt="Frozen Strawberry Peach Treat" class="recipe-image">
@@ -922,6 +1181,19 @@
                         <span class="ninja-badge">🥷 NINJA</span>
                         <h3>🍑 FROZEN STRAWBERRY PEACH</h3>
                         <p class="recipe-tagline">while (craving) { blend(strawberry, peach).freeze(); }</p>
+                    </div>
+                </div>
+                
+                <!-- Character Comment Block - Richard -->
+                <div class="character-comment" data-character="richard">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "I turned down $10M for this recipe and I'd do it again.</span>
+                        <span class="comment-line">//  I think. I mean... I don't know. Monica, what do you think?"</span>
+                        <span class="comment-line">// if (regret > 0) { blend(harder); }</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">😰</span>
+                        <span class="char-name">— R. Hendricks, CEO · Regretting Every Decision Optimally</span>
                     </div>
                 </div>
                 
@@ -957,7 +1229,7 @@
                 </div>
             </article>
 
-            <!-- COCONUT PINEAPPLE SORBET -->
+            <!-- COCONUT PINEAPPLE SORBET - ERLICH -->
             <article class="recipe-card ninja-recipe">
                 <div class="recipe-header">
                     <img src="https://sspark.genspark.ai/cfimages?u1=ZG%2FtV2QNU1nm3pmNwH3%2BhMv8l9gVnMqdRzdKC7epCMHHZfZOaEPT%2FAJ5kgwbZQL3ZsWlBpxRH9XjaEGINOf2fGmBXgTNMewLmB54%2F26VW1erTQ%3D%3D&u2=afR%2FoaYNAbzoDN4x&width=2560" alt="Coconut Pineapple Sorbet" class="recipe-image">
@@ -965,6 +1237,20 @@
                         <span class="ninja-badge">🥷 NINJA</span>
                         <h3>🥥 COCONUT PINEAPPLE SORBET</h3>
                         <p class="recipe-tagline">export default function vacation() { return tropics.blend(); }</p>
+                    </div>
+                </div>
+                
+                <!-- Character Comment Block - Erlich -->
+                <div class="character-comment" data-character="erlich">
+                    <div class="char-comment-body">
+                        <span class="comment-line">// "I conceptualized this at my incubator during a particularly</span>
+                        <span class="comment-line">//  productive smoke session. I take 10% of all servings."</span>
+                        <span class="comment-line">// "The pineapple creates a boldness that lesser men fear.</span>
+                        <span class="comment-line">//  I am not a lesser man."</span>
+                    </div>
+                    <div class="char-attribution">
+                        <span class="char-emoji">🧔</span>
+                        <span class="char-name">— E. Bachman, Founder · Incubator Owner · 10% of Everything</span>
                     </div>
                 </div>
                 
@@ -1012,10 +1298,14 @@
         <div class="container">
             <p>
                 <span class="bracket">&lt;</span>
-                Built with 💪 and JavaScript
+                Built with 💪 Vanilla JS and zero VC funding
                 <span class="bracket">/&gt;</span>
             </p>
-            <p class="footer-note">Fork this repo and customize your own health protocol!</p>
+            <p class="footer-note">// Fork this repo. Customize your stack.</p>
+            <p class="footer-quote">// "I own 10% of this protocol." — E. Bachman</p>
+            <p class="footer-location">⌂ Hacker Hostel · Palo Alto, CA</p>
+            <p class="footer-signoff">// Acquired by your metabolism. Exit: TBD.</p>
+            <p class="footer-signoff">// Making the world a better place, one smoothie at a time.</p>
             <div class="tech-stack">
                 <span>HTML</span>
                 <span>CSS</span>
