@@ -1,223 +1,273 @@
-# 💪 Health-Code
+# 💪 Health-Code v2.0
 
-> A developer-friendly nutrition protocol featuring optimized smoothie recipes and a complete health roadmap.
+> A developer-friendly nutrition protocol featuring optimized smoothie recipes, nourishing soups, zesty sauces, and frozen treats—all with a cyberpunk twist.
 
 🌐 **Live Site:** [https://denny-architect.github.io/health-code/](https://denny-architect.github.io/health-code/)
 
-[![Made with HTML](https://img.shields.io/badge/Made%20with-HTML-e34c26?style=flat-square&logo=html5)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![Styled with CSS](https://img.shields.io/badge/Styled%20with-CSS-264de4?style=flat-square&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![Vanilla JS](https://img.shields.io/badge/Powered%20by-Vanilla%20JS-f7df1e?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-222?style=flat-square&logo=github)](https://denny-architect.github.io/health-code/)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=flat&logo=github&logoColor=white)
+![Ninja Powered](https://img.shields.io/badge/Ninja-Powered-ff6b35?style=flat&logo=airplayvideo&logoColor=white)
 
-## 🎯 Mission
+---
 
-Execute a high-protein, nutrient-dense daily protocol designed for developers, athletes, and health-conscious humans who want optimal performance without complex meal prep.
+## 🎯 Mission Statement
 
-## 🚀 Features
+```javascript
+const DAILY_PROTEIN_TARGET = 121; // grams
+const MISSION = "Two smoothies a day keeps the bugs away 🐛";
+```
 
-- **6 Recipe Variants** - Three base smoothies (Citrus Sunrise 🍊, Strawberry Fields 🍓, Blueberry Blast 💜)
-- **Dual Versions** - Each recipe has a 1 PM "Break-Fast" version and a 5 PM "Post-Gym" version
-- **~121g Daily Protein** - Optimized macros across 2 smoothies + dinner
-- **Complete Shopping List** - Everything you need to get started
-- **Daily Schedule** - Timing protocol for maximum gains
-- **Tech-Inspired Design** - Because we code with style 😎
-- **Zero Dependencies** - Pure HTML, CSS, and Vanilla JavaScript
+This protocol is designed to deliver **~121g of daily protein** through a combination of:
+- ⚡ **Pre-Workout Smoothie** (~33g protein) - Energy & focus boosters
+- 💪 **Post-Workout Smoothie** (~48g protein) - Recovery & muscle building  
+- 🍽️ **Dinner** (~40g protein) - Complete your daily macros
+
+---
+
+## 🚀 What's New in v2.0
+
+### 🍹 **10 Smoothie Recipes** (Pre & Post-Workout Variants)
+| Recipe | Type | Pre-Workout Focus | Post-Workout Focus |
+|--------|------|-------------------|-------------------|
+| 🍊 Citrus Sunrise | Energy | Creatine + MCT | Protein + Recovery |
+| 🍓 Strawberry Fields | Berry | Antioxidants + LMNT | Collagen + Rebuild |
+| 🫐 Blueberry Blast | Antioxidant | Brain Fuel + Creatine | Mega Gains + Casein |
+| 🍉 Watermelon Quench | Hydration | Electrolytes + LMNT | Collagen + Refresh |
+| 🏝️ Island Sunrise | Tropical | Energy + Creatine | Island Recovery |
+| ☕ Banana Mocha Almond | Caffeine | Power Focus + MCT | Coffee Gains + Casein |
+| 🌴 Tropical Chill | Refresh | Hydration + MCT | Joint Support + Collagen |
+| 🍂 Cinnamon Coffee | Morning | Mental Clarity + Focus | Dessert Recovery |
+| 🍌 Strawberry Banana | Classic | Strength + Creatine | Mega Gains + Full Stack |
+| 🌅 Sunset Smoothie | Vitamin C | Nutrient Dense | Muscle Builder |
+
+### 🍲 **3 Hearty Soups**
+| Recipe | Protein | Prep Time | Perfect For |
+|--------|---------|-----------|-------------|
+| 🥦 Broccoli Cheddar | ~20g | 45 min | Cozy nights |
+| 🎃 Butternut Squash | ~8g | 65 min | Fall vibes |
+| 🌶️ Pep In Your Step | ~12g | 20 min | Quick energy |
+
+### 🥫 **2 Sauces & Dips**
+| Recipe | Use Case | Prep Time |
+|--------|----------|-----------|
+| 🍅 Sun-Dried Tomato Sauce | Pasta night | 50 min |
+| 🌶️ Chipotle Salsa | Taco Tuesday | 70 min |
+
+### 🍨 **3 Frozen Treats**
+| Recipe | Vibe | Prep Time |
+|--------|------|-----------|
+| 🍉 Watermelon Mint Granita | Summer refresh | 4 hrs |
+| 🍑 Frozen Strawberry Peach | Sweet treat | 10 min |
+| 🥥 Coconut Pineapple Sorbet | Tropical escape | 5 min |
+
+---
 
 ## 📊 Daily Protocol
 
-| Time | Meal | Protein | Notes |
-|------|------|---------|-------|
-| 1:00 PM | Break-Fast Smoothie | ~33g | No protein powder, full supplements |
-| 5:00 PM | Post-Gym Smoothie | ~48g | With protein powder for recovery |
-| 7:00 PM | Dinner | ~40g | Solid meal |
-| **Total** | | **~121g** | 🎯 Target achieved |
+```
+┌─────────────────────────────────────────────────────┐
+│  TIME    │  MEAL                    │  PROTEIN     │
+├─────────────────────────────────────────────────────┤
+│  1 PM    │  ⚡ Pre-Workout Smoothie  │  ~33g        │
+│  3 PM    │  🧠 Deep Focus Window     │  -           │
+│  5 PM    │  🏋️ Gym Session           │  -           │
+│  6 PM    │  💪 Post-Workout Smoothie │  ~48g        │
+│  8 PM    │  🍽️ Dinner                │  ~40g        │
+├─────────────────────────────────────────────────────┤
+│  TOTAL   │                          │  ~121g ✅    │
+└─────────────────────────────────────────────────────┘
+```
+
+---
 
 ## 🛠️ Tech Stack
 
-- **HTML5** - Semantic structure
-- **CSS3** - Custom properties, Grid, Flexbox, animations
-- **Vanilla JavaScript** - Tab navigation, localStorage persistence, easter eggs
-- **Google Fonts** - Fira Code (monospace) + Inter (sans-serif)
+```javascript
+const stack = {
+  markup: "HTML5",
+  styling: "CSS3",
+  scripts: "Vanilla JS",
+  fonts: ["Inter", "Fira Code"],
+  hosting: "GitHub Pages",
+  blender: "Ninja 72oz Total Crushing",
+  dependencies: 0,
+  frameworks: "None needed 💪"
+};
+```
 
-## 🏃 Quick Start
+---
 
-### Option 1: Clone and Open Locally
+## 🚀 Quick Start
 
+### Option 1: Clone & Open
 ```bash
-git clone https://github.com/YOUR_USERNAME/health-code.git
+git clone https://github.com/denny-architect/health-code.git
 cd health-code
-open index.html  # macOS
-# or
-xdg-open index.html  # Linux
-# or
-start index.html  # Windows
+# Open index.html in your browser
 ```
 
 ### Option 2: Deploy to GitHub Pages
-
 1. Fork this repository
-2. Go to **Settings** → **Pages**
-3. Select **main** branch as source
+2. Go to Settings → Pages
+3. Select `main` branch, `/ (root)` folder
 4. Your site will be live at `https://YOUR_USERNAME.github.io/health-code/`
 
-### Option 3: Run Local Server
-
+### Option 3: Local Development Server
 ```bash
-# Python 3
+# Python
 python -m http.server 8000
 
-# Python 2
-python -m SimpleHTTPServer 8000
-
-# Node.js (if you have http-server installed)
+# Node.js
 npx http-server
 
-# Then open http://localhost:8000
+# PHP
+php -S localhost:8000
 ```
 
-## 📦 What's Included
+---
+
+## 📁 Project Structure
 
 ```
 health-code/
-├── index.html      # Main HTML structure
-├── styles.css      # Tech-inspired styling
-├── script.js       # Tab navigation & interactions
-└── README.md       # You are here
+├── index.html        # Main app with all recipes
+├── styles.css        # Cyberpunk aesthetics
+├── script.js         # Tab navigation & interactions
+├── README.md         # You are here
+├── CONTRIBUTING.md   # Contribution guidelines
+├── LICENSE           # MIT License
+├── robots.txt        # SEO directives
+└── sitemap.xml       # Search engine sitemap
 ```
+
+---
 
 ## 🎨 Design Philosophy
 
-- **Dark Mode First** - Easy on developer eyes
-- **Code-Inspired UI** - Brackets, monospace fonts, syntax highlighting vibes
-- **Cyberpunk Aesthetic** - Electric blues, neon accents, gradient magic
-- **Responsive** - Works on all devices (desktop, tablet, mobile)
-- **Accessible** - Semantic HTML, keyboard navigation
+### Color System
+```css
+:root {
+  --primary: #00d9ff;    /* Electric Cyan */
+  --secondary: #ff006e;  /* Hot Pink */
+  --accent: #00ff9f;     /* Neon Green */
+  --warning: #ffd93d;    /* Gold */
+  --dark: #0a0e27;       /* Deep Space */
+  --glass: rgba(255, 255, 255, 0.03);
+}
+```
+
+### Features
+- 🌙 **Dark Mode First** - Easy on the eyes
+- 🔥 **Cyberpunk Aesthetic** - Neon glows & glass morphism
+- 📱 **Fully Responsive** - Looks great on any device
+- ♿ **Accessible** - Semantic HTML & keyboard navigation
+- 🏷️ **Ninja Badges** - Original recipe attribution
+- ⚡ **Pre/Post Variants** - Different protein stacks
+
+---
+
+## 🎮 Easter Egg
+
+Try the Konami Code on the live site:
+```
+↑ ↑ ↓ ↓ ← → ← → B A
+```
+
+---
+
+## 🛒 Key Ingredients
+
+### Supplements & Protein
+- Optimum Nutrition Whey (Double Rich Chocolate)
+- Micronized Creatine Monohydrate
+- MCT Oil
+- LMNT Electrolytes
+- Collagen Peptides
+- Casein Protein (slow release)
+
+### Base Ingredients
+- Kirkland Organic Greek Yogurt
+- Unsweetened Almond Milk
+- Coconut Water
+- Orange Juice
+- Coffee (cold brew)
+
+### Frozen Fruit Arsenal
+- O Organics Wild Blueberries
+- O Organics Mixed Berries
+- Frozen Mango Chunks
+- Frozen Pineapple
+- Frozen Peaches
+- Frozen Strawberries
+
+### Fresh Produce
+- Bananas
+- Oranges
+- Watermelon
+- Honeydew
+- Lime
+- Fresh mint
+
+---
 
 ## 💡 Pro Tips
 
-### Kitchen Optimization
-- **Batch Prep**: Pre-portion frozen fruit into labeled bags
-- **Version Control**: Track which recipe variant you're running
-- **Debug Mode**: Too thick? Add liquid. Too thin? Add ice/frozen fruit.
-
-### Shopping Strategy
-1. Hit Costco/Whole Foods for bulk organic items
-2. Store bananas at room temp, freeze overripe ones
-3. Get a 32oz+ tumbler (LMNT tumbler recommended 👌)
-4. Invest in a high-power blender (Vitamix, Ninja, or similar)
-
-### Daily Execution
 ```javascript
-class HealthProtocol {
-  constructor() {
-    this.time = "1:00 PM";
-    this.recipe = "CITRUS_SUNRISE";
-  }
-
-  async execute() {
-    await this.blend();
-    await this.consume();
-    return this.gainz();
-  }
-}
-
-const protocol = new HealthProtocol();
-protocol.execute(); // 🚀
+const TIPS = [
+  "🧊 Pre-portion smoothie ingredients in freezer bags",
+  "🔄 Alternate recipes to prevent taste fatigue",
+  "⏰ Prep bags on Sunday for the whole week",
+  "🥤 Use a 32oz tumbler for portability",
+  "🔌 High-powered blender = smoother results",
+  "☕ Cold brew concentrate for Banana Mocha = chef's kiss",
+  "🧊 Freeze leftover coconut water in ice cube trays",
+  "⚠️ Hot soup mode: Always vent lid, pulse first!"
+];
 ```
 
-## 🎮 Easter Eggs
-
-Try the **Konami Code** on the live site:  
-`↑ ↑ ↓ ↓ ← → ← → B A`
-
-Check the browser console for ASCII art and pro tips! 🎨
-
-## 🔧 Customization
-
-### Change Color Theme
-
-Edit CSS variables in `styles.css`:
-
-```css
-:root {
-    --primary: #00d9ff;     /* Main accent */
-    --secondary: #ff006e;   /* Highlights */
-    --accent: #00ff9f;      /* Success states */
-    --dark: #0a0e27;        /* Background */
-}
-```
-
-### Add Your Own Recipes
-
-1. Copy an existing recipe card in `index.html`
-2. Update the emoji, title, image URL, and ingredients
-3. Add your variant to the navigation if needed
-
-### Extend Functionality
-
-The codebase is vanilla JS - easy to extend:
-- Add a "Notes" section with localStorage
-- Integrate a timer for smoothie prep
-- Build a macro calculator
-- Connect to a nutrition API
-
-## 📸 Screenshots
-
-### Hero Section
-Clean, code-inspired header with daily stats
-
-### Recipe Cards
-Beautiful imagery with syntax-highlighted ingredient lists
-
-### Shopping List
-Checkboxes with localStorage persistence
-
-### Daily Schedule
-Timeline view showing optimal timing for each meal
+---
 
 ## 🤝 Contributing
 
-Want to improve the protocol? PRs welcome!
-
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/amazing-addition`)
-3. Commit your changes (`git commit -m 'Add some amazing addition'`)
-4. Push to the branch (`git push origin feature/amazing-addition`)
-5. Open a Pull Request
+We welcome contributions! Check out our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ### Ideas for Contributions
-- [ ] Additional recipe variants (green smoothies, protein shakes, etc.)
-- [ ] Nutrition calculator
-- [ ] Meal prep timer
-- [ ] Print-friendly stylesheet enhancements
-- [ ] Dark/light theme toggle
-- [ ] Recipe rating system
-- [ ] Share to social media functionality
+- 🍏 More smoothie recipes
+- 🍜 Additional soup recipes
+- 🧮 Macro calculator feature
+- ⏱️ Prep timer functionality
+- 🖨️ Print-friendly stylesheet
+- 🌗 Light/dark theme toggle
 
-## 📄 License
+---
 
-MIT License - Feel free to fork, modify, and use for your own health journey!
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## 🙏 Acknowledgments
 
-- Recipe formulation by a health-conscious developer
-- Inspired by the intersection of nutrition science and software engineering
-- Built with ❤️ and JavaScript
+- **Ninja Kitchen** - Original recipe inspiration from the 72oz Total Crushing Pitcher recipe book
+- **Optimum Nutrition** - Quality protein supplements
+- **The Developer Community** - For making health fun and geeky
+
+---
 
 ## 📬 Contact
 
-Have questions or want to share your results?
-
-- Open an issue on GitHub
-- Star ⭐ this repo if it helped you!
-- Share it with fellow developers who need nutrition optimization
+- **Issues**: [GitHub Issues](https://github.com/denny-architect/health-code/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/denny-architect/health-code/discussions)
 
 ---
 
 <div align="center">
 
-**Built with 💪 for optimal performance**
+**Made with 💪 and ☕ by [Denny Architect](https://github.com/denny-architect)**
 
-`npm install health && blend()`
+*"Two smoothies a day keeps the bugs away"* 🐛
 
 </div>
