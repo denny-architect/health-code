@@ -2,6 +2,9 @@
     --primary: #00d9ff;
     --secondary: #ff006e;
     --accent: #00ff9f;
+    --ninja-orange: #ff8c00;
+    --pre-workout: #ffd700;
+    --post-workout: #ff006e;
     --dark: #0a0e27;
     --dark-lighter: #151933;
     --dark-card: #1a1f3a;
@@ -11,6 +14,8 @@
     --border: #30363d;
     --success: #3fb950;
     --warning: #d29922;
+    --gradient-cyber: linear-gradient(135deg, #00d9ff 0%, #00ff9f 50%, #ff006e 100%);
+    --gradient-ninja: linear-gradient(135deg, #ff8c00 0%, #ff006e 100%);
 }
 
 * {
@@ -43,6 +48,19 @@ code, .code-comment, .logo, .recipe-tagline {
     border-bottom: 2px solid var(--border);
     padding: 3rem 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .logo {
@@ -51,6 +69,25 @@ code, .code-comment, .logo, .recipe-tagline {
     margin-bottom: 1rem;
     color: var(--primary);
     letter-spacing: -1px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.version-badge {
+    background: var(--gradient-cyber);
+    color: var(--dark);
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-weight: 700;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 217, 255, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 30px rgba(0, 255, 159, 0.4); }
 }
 
 .bracket {
@@ -80,7 +117,7 @@ code, .code-comment, .logo, .recipe-tagline {
 
 .stats {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
@@ -90,16 +127,22 @@ code, .code-comment, .logo, .recipe-tagline {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     background: var(--dark-card);
     border: 1px solid var(--border);
     border-radius: 8px;
-    transition: transform 0.2s, border-color 0.2s;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .stat:hover {
     transform: translateY(-2px);
     border-color: var(--primary);
+    box-shadow: 0 4px 20px rgba(0, 217, 255, 0.2);
+}
+
+.glow-stat {
+    border-color: var(--secondary);
+    background: linear-gradient(135deg, rgba(255, 0, 110, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%);
 }
 
 .stat-value {
@@ -121,6 +164,7 @@ code, .code-comment, .logo, .recipe-tagline {
     position: sticky;
     top: 0;
     z-index: 100;
+    overflow-x: auto;
 }
 
 .nav-tabs .container {
@@ -131,15 +175,17 @@ code, .code-comment, .logo, .recipe-tagline {
 
 .tab {
     flex: 1;
-    padding: 1rem 2rem;
+    min-width: max-content;
+    padding: 1rem 1.5rem;
     background: transparent;
     border: none;
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
     border-bottom: 3px solid transparent;
+    white-space: nowrap;
 }
 
 .tab:hover {
@@ -183,6 +229,10 @@ main {
     margin-bottom: 0.5rem;
 }
 
+.function-name {
+    color: var(--primary);
+}
+
 .code-comment {
     color: var(--text-muted);
     font-style: italic;
@@ -203,6 +253,29 @@ main {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0, 217, 255, 0.15);
     border-color: var(--primary);
+}
+
+/* Ninja Recipe Styling */
+.ninja-recipe {
+    border-color: var(--ninja-orange);
+    background: linear-gradient(135deg, var(--dark-card) 0%, rgba(255, 140, 0, 0.05) 100%);
+}
+
+.ninja-recipe:hover {
+    box-shadow: 0 8px 24px rgba(255, 140, 0, 0.2);
+    border-color: var(--ninja-orange);
+}
+
+.ninja-badge {
+    display: inline-block;
+    background: var(--gradient-ninja);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
 }
 
 .recipe-header {
@@ -270,6 +343,7 @@ main {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .badge {
@@ -279,6 +353,18 @@ main {
     border-radius: 20px;
     font-size: 0.85rem;
     border: 1px solid var(--primary);
+}
+
+.badge-pre {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--pre-workout);
+    border-color: var(--pre-workout);
+}
+
+.badge-post {
+    background: rgba(255, 0, 110, 0.1);
+    color: var(--secondary);
+    border-color: var(--secondary);
 }
 
 .badge-pro {
@@ -304,6 +390,36 @@ main {
     background: rgba(255, 0, 110, 0.1);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
+}
+
+/* DIRECTIONS */
+.directions {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--code-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.directions h5 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.directions ol {
+    margin-left: 1.5rem;
+    color: var(--text-muted);
+}
+
+.directions li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+}
+
+.directions li::marker {
+    color: var(--primary);
+    font-weight: bold;
 }
 
 /* CODE BLOCKS */
@@ -429,7 +545,7 @@ main {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, var(--primary), var(--accent));
+    background: linear-gradient(to bottom, var(--pre-workout), var(--primary), var(--post-workout), var(--accent));
 }
 
 .timeline-event {
@@ -449,6 +565,16 @@ main {
     border: 3px solid var(--dark);
     border-radius: 50%;
     transform: translateX(-7px);
+}
+
+.timeline-event.pre-workout::before {
+    background: var(--pre-workout);
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2);
+}
+
+.timeline-event.post-workout::before {
+    background: var(--post-workout);
+    box-shadow: 0 0 0 4px rgba(255, 0, 110, 0.2);
 }
 
 .timeline-event.highlight::before {
@@ -481,6 +607,11 @@ main {
 .timeline-event.highlight .event-content {
     border-color: var(--secondary);
     background: rgba(255, 0, 110, 0.05);
+}
+
+.timeline-event.pre-workout .event-content {
+    border-color: var(--pre-workout);
+    background: rgba(255, 215, 0, 0.05);
 }
 
 .event-content:hover {
@@ -630,6 +761,25 @@ footer p {
     color: var(--text-muted);
 }
 
+/* SCROLLBAR STYLING */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-lighter);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .container {
@@ -641,7 +791,9 @@ footer p {
     }
 
     .logo {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .hero h1 {
@@ -653,12 +805,21 @@ footer p {
     }
 
     .stat {
-        padding: 0.75rem 1.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .nav-tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .tab {
         padding: 0.75rem 1rem;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .recipe-header {
@@ -684,6 +845,10 @@ footer p {
     .schedule-container {
         gap: 2rem;
     }
+
+    .intro h2 {
+        font-size: 1.4rem;
+    }
 }
 
 /* PRINT STYLES */
@@ -695,4 +860,29 @@ footer p {
     .recipe-card {
         page-break-inside: avoid;
     }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .recipe-card {
+        border: 1px solid #ccc;
+    }
+}
+
+/* ANIMATION UTILITIES */
+.glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 10px var(--primary); }
+    50% { text-shadow: 0 0 20px var(--primary), 0 0 30px var(--accent); }
+}
+
+/* Selection styling */
+::selection {
+    background: var(--primary);
+    color: var(--dark);
 }
