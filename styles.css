@@ -29,6 +29,13 @@
     --color-jianyang: #E74C3C;
     --color-monica: #2ECC71;
     --color-phosphor: #00FF41;
+    
+    /* Tres Comas Brand Colors */
+    --tc-gold: #C9A84C;
+    --tc-gold-light: #FFD700;
+    --tc-comma: #C9A84C;
+    --tc-dark: #0d1117;
+    --tc-unicorn: #7B2FBE;
 }
 
 * {
@@ -43,6 +50,16 @@ body {
     color: var(--text);
     line-height: 1.6;
     min-height: 100vh;
+    border-top: 3px solid var(--tc-gold);
+}
+
+/* TRES COMAS SYMBOL */
+.tres-comas-symbol {
+    font-family: monospace;
+    color: var(--tc-gold);
+    letter-spacing: -2px;
+    font-size: 1.4em;
+    font-weight: 900;
 }
 
 code, .code-comment, .logo, .recipe-tagline {
@@ -92,8 +109,8 @@ code, .code-comment, .logo, .recipe-tagline {
     z-index: 1;
 }
 
-/* HACKER HOSTEL STAMP */
-.hacker-hostel-stamp {
+/* TRES COMAS STAMP */
+.tres-comas-stamp {
     position: absolute;
     top: 1rem;
     right: 2rem;
@@ -101,43 +118,54 @@ code, .code-comment, .logo, .recipe-tagline {
     flex-direction: column;
     align-items: center;
     padding: 0.75rem 1rem;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(201, 168, 76, 0.6);
     border-radius: 4px;
     transform: rotate(-3deg);
-    opacity: 0.65;
+    opacity: 0.85;
     font-family: 'Fira Code', monospace;
     font-size: 0.65rem;
-    color: var(--text-muted);
-    background: rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease;
+    color: rgba(201, 168, 76, 0.75);
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.hacker-hostel-stamp:hover {
-    opacity: 0.9;
+.tres-comas-stamp:hover {
+    opacity: 1;
+    transform: rotate(-3deg) scale(1.05);
 }
 
-.stamp-icon {
-    font-size: 1.2rem;
+.stamp-symbol {
+    font-family: monospace;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--tc-gold);
+    letter-spacing: -3px;
     margin-bottom: 0.25rem;
 }
 
 .stamp-title {
     font-weight: 700;
-    font-size: 0.7rem;
-    color: var(--text);
+    font-size: 0.65rem;
+    color: var(--tc-gold);
     letter-spacing: 0.5px;
 }
 
 .stamp-location {
-    font-size: 0.55rem;
+    font-size: 0.52rem;
     margin-top: 0.15rem;
+}
+
+.stamp-status {
+    font-size: 0.52rem;
+    margin-top: 0.15rem;
+    color: var(--tc-gold-light);
 }
 
 .stamp-tagline {
     font-style: italic;
-    font-size: 0.55rem;
+    font-size: 0.5rem;
     margin-top: 0.25rem;
-    color: var(--color-phosphor);
+    color: var(--text-muted);
 }
 
 .logo {
@@ -462,6 +490,47 @@ main {
 
 .char-emoji {
     font-size: 1.1em;
+}
+
+.char-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 2px solid var(--color-erlich);
+    flex-shrink: 0;
+}
+
+.character-comment[data-character="erlich"] .char-avatar {
+    border-color: var(--color-erlich);
+}
+.character-comment[data-character="richard"] .char-avatar {
+    border-color: var(--color-richard);
+}
+.character-comment[data-character="gilfoyle"] .char-avatar {
+    border-color: var(--color-gilfoyle);
+}
+.character-comment[data-character="russ"] .char-avatar {
+    border-color: var(--color-russ);
+}
+.character-comment[data-character="jared"] .char-avatar {
+    border-color: var(--color-jared);
+}
+.character-comment[data-character="gavin"] .char-avatar {
+    border-color: var(--color-gavin);
+}
+.character-comment[data-character="bighead"] .char-avatar {
+    border-color: var(--color-bighead);
+}
+.character-comment[data-character="dinesh"] .char-avatar {
+    border-color: var(--color-dinesh);
+}
+.character-comment[data-character="jianyang"] .char-avatar {
+    border-color: var(--color-jianyang);
+}
+.character-comment[data-character="monica"] .char-avatar {
+    border-color: var(--color-monica);
 }
 
 .char-name {
@@ -1173,4 +1242,327 @@ footer p {
 ::selection {
     background: var(--primary);
     color: var(--dark);
+}
+
+/* ============================================ */
+/* TEAM PAGE STYLES */
+/* ============================================ */
+
+.team-hero-banner {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    background-image: radial-gradient(circle at 50% 100%, rgba(201, 168, 76, 0.03) 0%, transparent 60%);
+    border: 1px solid rgba(201, 168, 76, 0.4);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.team-hero-image img {
+    height: 320px;
+    width: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.team-hero-content {
+    flex: 1;
+}
+
+.team-hero-content .tres-comas-symbol {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.team-hero-content h3 {
+    font-size: 1.8rem;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+}
+
+.team-hero-content .hero-title {
+    font-size: 0.9rem;
+    color: var(--tc-gold);
+    margin-bottom: 1rem;
+}
+
+.team-hero-content .hero-quote {
+    font-family: 'Fira Code', monospace;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--tc-gold);
+}
+
+.team-hero-content .hero-stats {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.team-hero-content .hero-stats strong {
+    color: var(--tc-gold);
+}
+
+.team-hero-badge {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: var(--tc-gold);
+    letter-spacing: -2px;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 3px solid var(--color-richard);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(88, 166, 255, 0.2);
+}
+
+.team-card[data-character="richard"] { border-top-color: var(--color-richard); }
+.team-card[data-character="richard"]:hover { box-shadow: 0 8px 24px rgba(88, 166, 255, 0.2); }
+.team-card[data-character="erlich"] { border-top-color: var(--color-erlich); }
+.team-card[data-character="erlich"]:hover { box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2); }
+.team-card[data-character="gilfoyle"] { border-top-color: var(--color-gilfoyle); }
+.team-card[data-character="gilfoyle"]:hover { box-shadow: 0 8px 24px rgba(139, 0, 0, 0.2); }
+.team-card[data-character="dinesh"] { border-top-color: var(--color-dinesh); }
+.team-card[data-character="dinesh"]:hover { box-shadow: 0 8px 24px rgba(52, 152, 219, 0.2); }
+.team-card[data-character="jared"] { border-top-color: var(--color-jared); }
+.team-card[data-character="jared"]:hover { box-shadow: 0 8px 24px rgba(126, 188, 137, 0.2); }
+.team-card[data-character="bighead"] { border-top-color: var(--color-bighead); }
+.team-card[data-character="bighead"]:hover { box-shadow: 0 8px 24px rgba(149, 165, 166, 0.2); }
+.team-card[data-character="gavin"] { border-top-color: var(--color-gavin); }
+.team-card[data-character="gavin"]:hover { box-shadow: 0 8px 24px rgba(155, 89, 182, 0.2); }
+.team-card[data-character="monica"] { border-top-color: var(--color-monica); }
+.team-card[data-character="monica"]:hover { box-shadow: 0 8px 24px rgba(46, 204, 113, 0.2); }
+.team-card[data-character="jianyang"] { border-top-color: var(--color-jianyang); }
+.team-card[data-character="jianyang"]:hover { box-shadow: 0 8px 24px rgba(231, 76, 60, 0.2); }
+
+.team-card-image img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.team-card-name {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: white;
+}
+
+.team-card-title {
+    font-size: 0.82em;
+    color: var(--color-richard);
+    margin-bottom: 8px;
+}
+
+.team-card[data-character="richard"] .team-card-title { color: var(--color-richard); }
+.team-card[data-character="erlich"] .team-card-title { color: var(--color-erlich); }
+.team-card[data-character="gilfoyle"] .team-card-title { color: var(--color-gilfoyle); }
+.team-card[data-character="dinesh"] .team-card-title { color: var(--color-dinesh); }
+.team-card[data-character="jared"] .team-card-title { color: var(--color-jared); }
+.team-card[data-character="bighead"] .team-card-title { color: var(--color-bighead); }
+.team-card[data-character="gavin"] .team-card-title { color: var(--color-gavin); }
+.team-card[data-character="monica"] .team-card-title { color: var(--color-monica); }
+.team-card[data-character="jianyang"] .team-card-title { color: var(--color-jianyang); }
+
+.team-card-equity {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--tc-gold);
+    border-radius: 12px;
+    font-size: 0.7em;
+    color: var(--tc-gold);
+    margin-bottom: 10px;
+}
+
+.team-card-bio {
+    font-size: 0.78em;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.team-card-quote {
+    font-family: monospace;
+    font-size: 0.76em;
+    color: var(--color-phosphor);
+    font-style: italic;
+}
+
+/* ============================================ */
+/* PRESS ROOM STYLES */
+/* ============================================ */
+
+.press-release {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid var(--color-richard);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.press-release[data-accent="richard"] { border-left-color: var(--color-richard); }
+.press-release[data-accent="russ"] { border-left-color: var(--color-russ); }
+.press-release[data-accent="gavin"] { border-left-color: var(--color-gavin); }
+.press-release[data-accent="bighead"] { border-left-color: var(--color-bighead); }
+.press-release[data-accent="phosphor"] { border-left-color: var(--color-phosphor); }
+
+.press-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: background 200ms ease;
+}
+
+.press-header:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.press-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+}
+
+.press-header-content {
+    flex: 1;
+}
+
+.press-dateline {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.press-headline {
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.press-preview {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.press-expand {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: var(--color-phosphor);
+}
+
+.press-body {
+    display: none;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
+}
+
+.press-body.expanded {
+    display: block;
+}
+
+.press-body p {
+    margin-bottom: 1rem;
+}
+
+.press-filed {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--color-phosphor);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.press-symbol {
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: var(--tc-gold);
+    letter-spacing: -2px;
+    display: block;
+    margin-top: 1rem;
+}
+
+/* ============================================ */
+/* RESPONSIVE TEAM & PRESS */
+/* ============================================ */
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .tres-comas-stamp {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 1rem;
+        transform: rotate(0);
+    }
+    
+    .team-hero-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .team-hero-image img {
+        height: 200px;
+    }
+    
+    .team-hero-content .hero-quote {
+        border-left: none;
+        padding-left: 0;
+        border-top: 2px solid var(--tc-gold);
+        padding-top: 1rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .press-header {
+        flex-direction: column;
+        text-align: center;
+    }
 }

@@ -1,22 +1,23 @@
-// Pied Piper Nutrition Lab v3.0
+// Tres Comas Nutrition Labs v4.0
 // MCP: Meal Context Protocol v1.0 — deployed to production
 // Vibe-coded by a 10x engineer on 2 smoothies and zero sleep
+// "I own 10% of this codebase." — E. Bachman
 
 document.addEventListener('DOMContentLoaded', () => {
     // ============================================
-    // ROTATING TAGLINES - Silicon Valley Edition
+    // ROTATING TAGLINES - Tres Comas Edition
     // ============================================
     const taglines = [
         '// "Two smoothies a day keeps the bugs away." — R. Hendricks (he already regrets saying it)',
-        '// Making the world a better place through middle-out macro compression. 🥤',
-        '// I don\'t want to live in a world where someone else optimizes their nutrition better than we do. — G. Belson',
-        '// Not a recipe app. Nutrition infrastructure. We\'re in the Three Macro Club. 💪',
-        '// This is not financial advice. It might be dietary alpha. — R. Hanneman',
-        '// Warning: Not FDA approved. Neither was Pied Piper. — E. Bachman',
-        '// You\'re funded. (electrolytes included, no VC required) 💧',
-        '// Vibe-coded nutrition. Zero hallucinations. — AI Nutrition Agent v1.0',
-        '// catch(burnout) { return this.pivot("soups"); }',
-        '// Deployed to production. Target: your mitochondria. ⚡'
+        '// Making the world a better place through middle-out macro compression. ,,,',
+        '// We are a $1.2B company. Russ says this is embarrassing. He is not wrong.',
+        '// Nutrition infrastructure for the three-comma body. 💪',
+        '// "I own 10% of this tagline." — E. Bachman',
+        '// Series B lead investor thought he was signing up for a smoothie subscription. Still did it.',
+        '// "Consider the broccoli. It too began compressed." — G. Belson',
+        '// ROI: Refreshment On Investment. — R. Hanneman, Chairman of Vibes',
+        '// catch(burnout) { return this.pivot("soups"); } // happened twice',
+        '// Jian-Yang\'s title has been updated 7 times. Current: Chief of Emerging Verticals.'
     ];
     
     let currentTaglineIndex = 0;
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('particle-canvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
-        const codeChars = ['0', '1', '{', '}', '[', ']', '/', '<', '>'];
+        const codeChars = ['0', '1', '{', '}', '[', ']', '/', '<', '>', ',', ',', ','];
         const particles = [];
         const MAX_PARTICLES = 60;
         let animationId;
@@ -99,9 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (particle.y < 0) particle.y = canvas.height;
                 if (particle.y > canvas.height) particle.y = 0;
                 
-                // Draw particle
+                // Draw particle - gold for commas, green for others
                 ctx.font = `${particle.size}px 'Fira Code', monospace`;
-                ctx.fillStyle = `rgba(0, 255, 65, ${particle.opacity})`;
+                if (particle.char === ',') {
+                    ctx.fillStyle = `rgba(201, 168, 76, ${particle.opacity * 1.5})`;
+                } else {
+                    ctx.fillStyle = `rgba(0, 255, 65, ${particle.opacity})`;
+                }
                 ctx.fillText(particle.char, particle.x, particle.y);
             });
             
@@ -175,6 +180,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ============================================
+    // PRESS ROOM - EXPAND/COLLAPSE
+    // ============================================
+    const pressHeaders = document.querySelectorAll('.press-header');
+    
+    pressHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const body = header.nextElementSibling;
+            const expandText = header.querySelector('.press-expand');
+            
+            if (body && body.classList.contains('press-body')) {
+                body.classList.toggle('expanded');
+                if (expandText) {
+                    expandText.textContent = body.classList.contains('expanded') ? '// collapse()' : '// expand()';
+                }
+            }
+        });
+    });
+
+    // ============================================
     // SHOPPING LIST PERSISTENCE (localStorage)
     // ============================================
     const checkboxes = document.querySelectorAll('.shopping-list input[type="checkbox"]');
@@ -211,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ============================================
-    // KONAMI CODE EASTER EGG - Pied Piper Edition
+    // KONAMI CODE EASTER EGG - Tres Comas Edition
     // ============================================
     let konamiCode = [];
     const konamiPattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
@@ -242,23 +266,23 @@ document.addEventListener('DOMContentLoaded', () => {
             style.remove();
         }, 4000);
 
-        // Show Pied Piper notification
+        // Show Tres Comas notification
         const notification = document.createElement('div');
-        notification.innerHTML = '🚀 FOUNDER MODE ACTIVATED! 💪<br><small>// This guy blends</small>';
+        notification.innerHTML = '🚀 THREE COMMA MODE ACTIVATED! ,,,<br><small>// This guy blends (and has a billion dollars)</small>';
         notification.style.cssText = `
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: linear-gradient(135deg, #ff8c00 0%, #ff006e 100%);
-            color: white;
+            background: linear-gradient(135deg, #C9A84C 0%, #FFD700 100%);
+            color: #0d1117;
             padding: 2rem 3rem;
             border-radius: 12px;
             font-size: 1.5rem;
             font-weight: 900;
             z-index: 10000;
             animation: scaleIn 0.3s ease-out;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: none;
             text-align: center;
             font-family: 'Fira Code', monospace;
         `;
@@ -348,40 +372,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================
     const versionBadge = document.querySelector('.version-badge');
     if (versionBadge) {
-        versionBadge.title = 'Pied Piper Nutrition Lab v3.0 — Post-pivot, pre-revenue, full send';
+        versionBadge.title = 'Tres Comas Nutrition Labs v4.0 — Unicorn Edition · $1.2B (Russ disagrees)';
     }
 
     // ============================================
-    // CONSOLE BANNER - Pied Piper Edition
+    // CONSOLE BANNER - Tres Comas Edition
     // ============================================
     const ninjaRecipes = document.querySelectorAll('.ninja-recipe');
     const totalRecipes = document.querySelectorAll('.recipe-card');
     const characterCommentCount = document.querySelectorAll('.character-comment').length;
+    const teamCards = document.querySelectorAll('.team-card');
+    const pressReleases = document.querySelectorAll('.press-release');
     
     console.log(`
     %c╔════════════════════════════════════════════════════════════════╗
-    ║   🚀 PIED PIPER NUTRITION LAB v3.0 INITIALIZED                 ║
+    ║   ,,, TRES COMAS NUTRITION LABS v4.0 INITIALIZED               ║
     ║   ─────────────────────────────────────────────────            ║
     ║   Status: DEPLOYED TO PRODUCTION                               ║
-    ║   Target: YOUR MITOCHONDRIA                                    ║
+    ║   Valuation: $1.2B (Russ says one comma is embarrassing)       ║
+    ║   Target: YOUR THREE-COMMA BODY                                ║
     ║   Protein Target: 121g (pre-revenue, intentional)              ║
     ║   ─────────────────────────────────────────────────            ║
     ║   Total Recipes: ${totalRecipes.length}                                            ║
     ║   🥷 Ninja Recipes: ${ninjaRecipes.length}                                          ║
     ║   💬 Character Comments: ${characterCommentCount}                                      ║
+    ║   👥 Team Members: ${teamCards.length + 1}                                           ║
+    ║   📰 Press Releases: ${pressReleases.length}                                           ║
     ║   Vertical Markets: Smoothies, Soups, Sauces, Frozen           ║
     ║   ─────────────────────────────────────────────────            ║
     ║   "Making the world a better place through                     ║
     ║    middle-out macro compression." — G. Belson                  ║
+    ║   ─────────────────────────────────────────────────            ║
+    ║   "I own 10% of this console log." — E. Bachman                ║
     ╚════════════════════════════════════════════════════════════════╝
-    `, 'color: #00d9ff; font-family: monospace; font-size: 11px;');
+    `, 'color: #C9A84C; font-family: monospace; font-size: 11px;');
     
     console.log('%c⚡ v1.0 — Minimum Viable Protein  |  💪 v2.0 — Scale Mode (// this guy recovers)', 
                 'color: #ff006e; font-family: monospace; font-size: 11px;');
     
-    console.log('%c💡 Pro Tip: Try the Konami Code for Founder Mode! ↑↑↓↓←→←→BA', 
+    console.log('%c💡 Pro Tip: Try the Konami Code for Three Comma Mode! ↑↑↓↓←→←→BA', 
                 'color: #00ff9f; font-family: monospace;');
     
-    console.log('%c// "I own 10% of this console log." — E. Bachman', 
-                'color: #FF6B35; font-family: monospace; font-style: italic;');
+    console.log('%c,,, Tres Comas Nutrition Labs · Hacker Hostel · Palo Alto, CA · Est. 2:47am', 
+                'color: #C9A84C; font-family: monospace; font-weight: bold;');
 });
