@@ -85,13 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Show notification
         const notification = document.createElement('div');
-        notification.textContent = '🚀 BEAST MODE ACTIVATED! 💪';
+        notification.textContent = '🚀 BEAST MODE ACTIVATED! 💪🥷';
         notification.style.cssText = `
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: rgba(255, 0, 110, 0.95);
+            background: linear-gradient(135deg, #ff8c00 0%, #ff006e 100%);
             color: white;
             padding: 2rem 3rem;
             border-radius: 12px;
@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             font-weight: 900;
             z-index: 10000;
             animation: scaleIn 0.3s ease-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         `;
         
         const scaleInStyle = document.createElement('style');
@@ -165,16 +166,44 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper.appendChild(copyBtn);
     });
 
+    // Add ninja recipe counter
+    const ninjaRecipes = document.querySelectorAll('.ninja-recipe');
+    const totalRecipes = document.querySelectorAll('.recipe-card');
+    
     // Log a fun message to console
     console.log(`
-    %c╔═══════════════════════════════════════════╗
-    ║   🚀 HEALTH-CODE INITIALIZED             ║
-    ║   Version: 1.0.0                         ║
-    ║   Status: READY TO BLEND                 ║
-    ║   Protein Target: 121g                   ║
-    ╚═══════════════════════════════════════════╝
+    %c╔════════════════════════════════════════════════════╗
+    ║   🚀 HEALTH-CODE v2.0 INITIALIZED                  ║
+    ║   ───────────────────────────────────────          ║
+    ║   Status: READY TO BLEND                           ║
+    ║   Protein Target: 121g                             ║
+    ║   Total Recipes: ${totalRecipes.length}                                ║
+    ║   🥷 Ninja Recipes: ${ninjaRecipes.length}                              ║
+    ║   Categories: Smoothies, Soups, Sauces, Frozen     ║
+    ╚════════════════════════════════════════════════════╝
     `, 'color: #00d9ff; font-family: monospace; font-size: 12px;');
+    
+    console.log('%c⚡ Pre-Workout and 💪 Post-Workout variants available!', 
+                'color: #ff006e; font-family: monospace; font-size: 12px;');
     
     console.log('%c💡 Pro Tip: Try the Konami Code for a surprise! ↑↑↓↓←→←→BA', 
                 'color: #00ff9f; font-family: monospace;');
+
+    // Add animated gradient to ninja badges
+    document.querySelectorAll('.ninja-badge').forEach(badge => {
+        badge.addEventListener('mouseenter', () => {
+            badge.style.transform = 'scale(1.1)';
+            badge.style.boxShadow = '0 0 15px rgba(255, 140, 0, 0.5)';
+        });
+        badge.addEventListener('mouseleave', () => {
+            badge.style.transform = 'scale(1)';
+            badge.style.boxShadow = 'none';
+        });
+    });
+
+    // Version badge tooltip
+    const versionBadge = document.querySelector('.version-badge');
+    if (versionBadge) {
+        versionBadge.title = 'Now with Ninja recipes, soups, sauces & frozen treats!';
+    }
 });
