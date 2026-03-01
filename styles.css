@@ -405,6 +405,13 @@ body {
     font-family: 'Courier New', monospace;
 }
 
+.tc-sel-card-categories {
+    font-size: 12px;
+    margin-top: 4px;
+    letter-spacing: 2px;
+    opacity: 0.85;
+}
+
 /* Bio Bar */
 .tc-bio-bar {
     display: flex;

@@ -816,11 +816,27 @@ function buildTicker() {
 // CHARACTER SELECTOR STRIP
 // ═══════════════════════════════════════════════════════════════════════════
 
+// Category emoji mapping
+const CATEGORY_EMOJIS = {
+    smoothie: '🥤',
+    soup: '🍲',
+    sauce: '🌶️',
+    frozen: '🧊'
+};
+
+// Get recipe category emojis for a character
+function getCharacterCategoryEmojis(charId) {
+    const charRecipes = RECIPES.filter(r => r.characterId === charId);
+    const categories = [...new Set(charRecipes.map(r => r.category))];
+    return categories.map(cat => CATEGORY_EMOJIS[cat] || '').join(' ');
+}
+
 function buildCharacterStrip() {
     const strip = document.getElementById('characterStrip');
     if (!strip) return;
     
     CHARACTERS.forEach(char => {
+        const categoryEmojis = getCharacterCategoryEmojis(char.id);
         const card = document.createElement('button');
         card.className = 'tc-sel-card';
         card.dataset.character = char.id;
@@ -828,7 +844,7 @@ function buildCharacterStrip() {
         card.innerHTML = `
             <img class="tc-sel-card-img" src="${char.portrait}" alt="${char.name}" loading="lazy">
             <div class="tc-sel-card-name">${char.name}</div>
-            <div class="tc-sel-card-recipes">2 recipes</div>
+            <div class="tc-sel-card-categories">${categoryEmojis}</div>
         `;
         card.addEventListener('click', () => selectCharacter(char.id));
         strip.appendChild(card);
