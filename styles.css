@@ -949,6 +949,412 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
+   ABOUT PAGE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.tc-about-section {
+    display: none;
+    max-width: 100%;
+}
+
+.tc-about-section.active {
+    display: block;
+}
+
+/* About Hero */
+.tc-about-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+    background: linear-gradient(180deg, #0a0a0f 0%, #12181f 100%);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    text-align: center;
+}
+
+.tc-about-hero-logo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+    filter: drop-shadow(0 4px 30px rgba(201,168,76,0.3));
+}
+
+.tc-about-hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tc-about-tagline {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #C9A84C;
+}
+
+.tc-about-est {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #6b7280;
+    letter-spacing: 2px;
+}
+
+/* Comma Tracker */
+.tc-comma-tracker {
+    padding: 48px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tc-comma-tracker-header h2 {
+    font-size: 24px;
+    color: #FFD700;
+    margin-bottom: 8px;
+}
+
+.tc-comma-tracker-header p {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 32px;
+}
+
+.tc-comma-tracker-visual {
+    margin-bottom: 32px;
+}
+
+.tc-comma-tracker-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(201,168,76,0.2);
+}
+
+/* Comma Meter */
+.tc-comma-meter {
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.tc-comma-meter-bar {
+    position: relative;
+    height: 24px;
+    background: #1a1f2e;
+    border-radius: 12px;
+    border: 1px solid rgba(201,168,76,0.3);
+    overflow: visible;
+}
+
+.tc-comma-meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #C9A84C, #FFD700);
+    border-radius: 12px 0 0 12px;
+    box-shadow: 0 0 20px rgba(255,215,0,0.4);
+    transition: width 1s ease;
+}
+
+.tc-comma-milestone {
+    position: absolute;
+    top: -8px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tc-milestone-dot {
+    width: 16px;
+    height: 16px;
+    background: #1a1f2e;
+    border: 2px solid #4b5563;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+.tc-milestone-dot.achieved {
+    background: #FFD700;
+    border-color: #FFD700;
+    box-shadow: 0 0 12px rgba(255,215,0,0.6);
+}
+
+.tc-milestone-label {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: #6b7280;
+    margin-top: 28px;
+}
+
+.tc-comma-meter-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+}
+
+.tc-meter-current {
+    color: #FFD700;
+}
+
+.tc-meter-target {
+    color: #4b5563;
+}
+
+/* Comma Status */
+.tc-comma-status {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.tc-comma-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tc-comma-stat-value {
+    font-family: Georgia, serif;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.tc-comma-stat-value.tc-gold {
+    color: #FFD700;
+    text-shadow: 0 0 30px rgba(255,215,0,0.5);
+}
+
+.tc-comma-stat-value.tc-dim {
+    color: #2a2f3e;
+}
+
+.tc-comma-stat-label {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: #6b7280;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+/* Company Story */
+.tc-about-story {
+    padding: 48px 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(201,168,76,0.1);
+}
+
+.tc-story-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tc-story-stamp {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+.tc-story-header h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #00FF41;
+    letter-spacing: 3px;
+}
+
+/* Timeline */
+.tc-story-timeline {
+    position: relative;
+    padding-left: 32px;
+}
+
+.tc-story-timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #C9A84C, rgba(201,168,76,0.2));
+}
+
+.tc-story-event {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.tc-event-marker {
+    position: absolute;
+    left: -28px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background: #12181f;
+    border: 2px solid #C9A84C;
+    border-radius: 50%;
+}
+
+.tc-event-marker.achieved {
+    background: #FFD700;
+    border-color: #FFD700;
+    box-shadow: 0 0 12px rgba(255,215,0,0.6);
+}
+
+.tc-event-time {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: #C9A84C;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.tc-event-content h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.tc-event-content p {
+    font-size: 14px;
+    color: #9ca3af;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.tc-event-quote {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #00FF41;
+    font-style: italic;
+}
+
+/* Founding Four */
+.tc-founding-four {
+    padding: 48px 24px;
+    background: rgba(201,168,76,0.03);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+}
+
+.tc-founding-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.tc-founding-header h2 {
+    font-size: 24px;
+    color: #FFD700;
+    margin-bottom: 8px;
+}
+
+.tc-founding-header p {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.tc-founding-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tc-founding-card {
+    text-align: center;
+}
+
+.tc-founding-card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid rgba(201,168,76,0.3);
+    transition: all 0.3s ease;
+}
+
+.tc-founding-card:hover .tc-founding-card-img {
+    border-color: #C9A84C;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(201,168,76,0.3);
+}
+
+.tc-founding-card-label {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 12px;
+}
+
+/* Mission Statement */
+.tc-about-mission {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tc-mission-badge {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    filter: drop-shadow(0 4px 20px rgba(201,168,76,0.3));
+}
+
+.tc-mission-content {
+    flex: 1;
+}
+
+.tc-mission-content h3 {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #00FF41;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.tc-mission-text {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #C9A84C;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.tc-mission-stats {
+    display: flex;
+    gap: 32px;
+}
+
+.tc-mission-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.tc-mstat-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.tc-mstat-label {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: #6b7280;
+    letter-spacing: 1px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
    TEAM PAGE
    ═══════════════════════════════════════════════════════════════════════════ */
 
@@ -1356,6 +1762,32 @@ body {
         width: 280px;
     }
     
+    /* About Responsive */
+    .tc-founding-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tc-about-mission {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tc-mission-badge {
+        width: 150px;
+    }
+    
+    .tc-mission-stats {
+        justify-content: center;
+    }
+    
+    .tc-comma-status {
+        gap: 24px;
+    }
+    
+    .tc-comma-stat-value {
+        font-size: 48px;
+    }
+    
     /* Team Hero Responsive */
     .tc-team-hero {
         height: 420px;
@@ -1497,6 +1929,54 @@ body {
     .tc-press-release-header {
         flex-direction: column;
         text-align: center;
+    }
+    
+    /* About Mobile */
+    .tc-about-hero {
+        padding: 40px 16px;
+    }
+    
+    .tc-about-hero-logo {
+        max-width: 280px;
+    }
+    
+    .tc-about-tagline {
+        font-size: 16px;
+    }
+    
+    .tc-comma-tracker {
+        padding: 32px 16px;
+    }
+    
+    .tc-comma-tracker-header h2 {
+        font-size: 20px;
+    }
+    
+    .tc-comma-status {
+        gap: 16px;
+    }
+    
+    .tc-comma-stat-value {
+        font-size: 36px;
+    }
+    
+    .tc-story-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tc-founding-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .tc-mission-text {
+        font-size: 18px;
+    }
+    
+    .tc-mission-stats {
+        flex-wrap: wrap;
+        gap: 20px;
     }
     
     /* Team Hero Mobile */

@@ -169,6 +169,7 @@
 
 <div class="tc-secondary-nav">
     <button class="tc-secondary-nav-btn active" data-section="recipes">🥤 Recipes</button>
+    <button class="tc-secondary-nav-btn" data-section="about">🏢 About</button>
     <button class="tc-secondary-nav-btn" data-section="team">👥 Team</button>
     <button class="tc-secondary-nav-btn" data-section="press">📰 Press Room</button>
 </div>
@@ -194,6 +195,170 @@
 
     <!-- Recipe cards container - populated by JS -->
     <div class="tc-recipe-grid" id="recipeGrid"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     ABOUT SECTION
+     ═══════════════════════════════════════════════════════════════════════════ -->
+
+<section class="tc-about-section" id="aboutSection">
+    <!-- Hero with Logo -->
+    <div class="tc-about-hero">
+        <img src="assets/brand/logo-hero.png" alt="Tres Comas Nutrition Labs" class="tc-about-hero-logo">
+        <div class="tc-about-hero-text">
+            <span class="tc-about-tagline">Nutrition for the Three-Comma Body.</span>
+            <span class="tc-about-est">Est. 2:47 AM, a Tuesday</span>
+        </div>
+    </div>
+    
+    <!-- Comma Tracker -->
+    <div class="tc-comma-tracker">
+        <div class="tc-comma-tracker-header">
+            <h2>,,,  COMMA DEFICIT TRACKER</h2>
+            <p>// "One comma is an insult. We need TRES." — R. Hanneman</p>
+        </div>
+        <div class="tc-comma-tracker-visual">
+            <img src="assets/brand/comma-tracker.png" alt="Comma Progress" class="tc-comma-tracker-img">
+        </div>
+        <div class="tc-comma-meter">
+            <div class="tc-comma-meter-bar">
+                <div class="tc-comma-meter-fill" style="width: 33.3%"></div>
+                <div class="tc-comma-milestone" style="left: 33.3%">
+                    <span class="tc-milestone-dot achieved"></span>
+                    <span class="tc-milestone-label">$1B</span>
+                </div>
+                <div class="tc-comma-milestone" style="left: 66.6%">
+                    <span class="tc-milestone-dot"></span>
+                    <span class="tc-milestone-label">$2B</span>
+                </div>
+                <div class="tc-comma-milestone" style="left: 100%">
+                    <span class="tc-milestone-dot"></span>
+                    <span class="tc-milestone-label">$3B</span>
+                </div>
+            </div>
+            <div class="tc-comma-meter-labels">
+                <span class="tc-meter-current">Current: $1.2B</span>
+                <span class="tc-meter-target">Target: $1,000,000,000,000 (tres comas)</span>
+            </div>
+        </div>
+        <div class="tc-comma-status">
+            <div class="tc-comma-stat">
+                <span class="tc-comma-stat-value tc-gold">,</span>
+                <span class="tc-comma-stat-label">ACHIEVED</span>
+            </div>
+            <div class="tc-comma-stat">
+                <span class="tc-comma-stat-value tc-dim">,</span>
+                <span class="tc-comma-stat-label">PENDING</span>
+            </div>
+            <div class="tc-comma-stat">
+                <span class="tc-comma-stat-value tc-dim">,</span>
+                <span class="tc-comma-stat-label">PENDING</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Company Story -->
+    <div class="tc-about-story">
+        <div class="tc-story-header">
+            <img src="assets/brand/logo-stamp.png" alt="" class="tc-story-stamp">
+            <h2>// THE FOUNDING STORY</h2>
+        </div>
+        
+        <div class="tc-story-timeline">
+            <div class="tc-story-event">
+                <div class="tc-event-marker"></div>
+                <div class="tc-event-time">2:47 AM</div>
+                <div class="tc-event-content">
+                    <h3>The Discovery</h3>
+                    <p>While monitoring Pied Piper's decentralized internet traffic, Richard Hendricks discovered that 47% of all data flowing through the new internet was... smoothie recipes.</p>
+                    <span class="tc-event-quote">"I found this troubling. Erlich found this fundable."</span>
+                </div>
+            </div>
+            
+            <div class="tc-story-event">
+                <div class="tc-event-marker"></div>
+                <div class="tc-event-time">3:12 AM</div>
+                <div class="tc-event-content">
+                    <h3>The Name</h3>
+                    <p>Russ Hanneman arrived (uninvited), saw the blender, heard Erlich say "disruption," and immediately declared: "TRES COMAS." He then wrote a $2M check from his McLaren's glove compartment.</p>
+                    <span class="tc-event-quote">"That's how you do business. SCHWAAAAG."</span>
+                </div>
+            </div>
+            
+            <div class="tc-story-event">
+                <div class="tc-event-marker"></div>
+                <div class="tc-event-time">Q3, Year One</div>
+                <div class="tc-event-content">
+                    <h3>The Pivot</h3>
+                    <p>After Gavin Belson's $400M acquisition offer was declined, he led a $40M Series A instead. "If I cannot acquire it, I will influence it from within until it is essentially Hooli Nutrition anyway."</p>
+                    <span class="tc-event-quote">"Consider the tortoise."</span>
+                </div>
+            </div>
+            
+            <div class="tc-story-event">
+                <div class="tc-event-marker achieved"></div>
+                <div class="tc-event-time">TODAY</div>
+                <div class="tc-event-content">
+                    <h3>Unicorn Status</h3>
+                    <p>$1.2B valuation. One comma achieved. Two to go. Big Head accidentally led the Series B by clicking "yes" on what he thought was a smoothie subscription form.</p>
+                    <span class="tc-event-quote">"I don't really know how I got here, but the smoothie is good."</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Founding Four Cards -->
+    <div class="tc-founding-four">
+        <div class="tc-founding-header">
+            <h2>,,,  THE FOUNDING FOUR</h2>
+            <p>// The original Pied Piper crew who started it all</p>
+        </div>
+        <div class="tc-founding-grid">
+            <div class="tc-founding-card">
+                <img src="assets/cards/card-richard.png" alt="Richard Hendricks" class="tc-founding-card-img">
+                <div class="tc-founding-card-label">CEO / Chief Anxiety Officer</div>
+            </div>
+            <div class="tc-founding-card">
+                <img src="assets/cards/card-erlich.png" alt="Erlich Bachman" class="tc-founding-card-img">
+                <div class="tc-founding-card-label">Chief Vision Officer</div>
+            </div>
+            <div class="tc-founding-card">
+                <img src="assets/cards/card-gilfoyle.png" alt="Bertram Gilfoyle" class="tc-founding-card-img">
+                <div class="tc-founding-card-label">CTO / Nutrition Security</div>
+            </div>
+            <div class="tc-founding-card">
+                <img src="assets/cards/card-russ.png" alt="Russ Hanneman" class="tc-founding-card-img">
+                <div class="tc-founding-card-label">Chairman of Vibes</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mission Statement with Badge -->
+    <div class="tc-about-mission">
+        <img src="assets/brand/logo-badge.png" alt="Tres Comas Badge" class="tc-mission-badge">
+        <div class="tc-mission-content">
+            <h3>OUR MISSION</h3>
+            <p class="tc-mission-text">"To make the world a better place through middle-out macro compression, one smoothie at a time."</p>
+            <div class="tc-mission-stats">
+                <div class="tc-mission-stat">
+                    <span class="tc-mstat-value">20</span>
+                    <span class="tc-mstat-label">Recipes</span>
+                </div>
+                <div class="tc-mission-stat">
+                    <span class="tc-mstat-value">10</span>
+                    <span class="tc-mstat-label">Founders</span>
+                </div>
+                <div class="tc-mission-stat">
+                    <span class="tc-mstat-value">$1.2B</span>
+                    <span class="tc-mstat-label">Valuation</span>
+                </div>
+                <div class="tc-mission-stat">
+                    <span class="tc-mstat-value">1</span>
+                    <span class="tc-mstat-label">Blender</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════

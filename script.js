@@ -1121,6 +1121,7 @@ function showSection(section) {
     
     // Show/hide sections
     document.getElementById('recipeArea').style.display = section === 'recipes' ? '' : 'none';
+    document.getElementById('aboutSection').classList.toggle('active', section === 'about');
     document.getElementById('teamSection').classList.toggle('active', section === 'team');
     document.getElementById('pressSection').classList.toggle('active', section === 'press');
 }
