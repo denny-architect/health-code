@@ -886,8 +886,8 @@ body {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .tc-team-section {
-    padding: 32px 24px;
-    max-width: 1400px;
+    padding: 0;
+    max-width: 100%;
     margin: 0 auto;
     display: none;
 }
@@ -896,27 +896,112 @@ body {
     display: block;
 }
 
-.tc-team-header {
+/* Team Hero Banner */
+.tc-team-hero {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+
+.tc-team-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.tc-team-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(13,17,23,0.3) 0%,
+        rgba(13,17,23,0.5) 40%,
+        rgba(13,17,23,0.85) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.tc-team-hero-content {
     text-align: center;
-    margin-bottom: 40px;
+    max-width: 700px;
+    padding: 0 24px;
 }
 
-.tc-team-header h2 {
-    font-size: 28px;
-    color: #fff;
+.tc-team-hero-commas {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    color: #FFD700;
+    display: block;
     margin-bottom: 8px;
+    text-shadow: 0 2px 20px rgba(255,215,0,0.4);
 }
 
-.tc-team-header p {
-    color: #6b7280;
+.tc-team-hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 6px;
+    margin: 0 0 12px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.tc-team-hero-subtitle {
     font-family: 'Courier New', monospace;
-    font-size: 13px;
+    font-size: 14px;
+    color: #C9A84C;
+    letter-spacing: 3px;
+    margin: 0 0 20px;
 }
 
+.tc-team-hero-quote {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    margin: 0 0 8px;
+}
+
+.tc-team-hero-attribution {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Meet the Team Intro */
+.tc-team-intro {
+    text-align: center;
+    padding: 48px 24px 32px;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    margin-bottom: 32px;
+}
+
+.tc-team-intro-title {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #00FF41;
+    letter-spacing: 3px;
+    margin: 0 0 8px;
+}
+
+.tc-team-intro-desc {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Team Grid - now with padding */
 .tc-team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
+    padding: 0 24px 48px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .tc-team-card {
@@ -1202,6 +1287,26 @@ body {
     
     .tc-header-identity svg {
         width: 280px;
+    }
+    
+    /* Team Hero Responsive */
+    .tc-team-hero {
+        height: 350px;
+    }
+    
+    .tc-team-hero-title {
+        font-size: 32px;
+        letter-spacing: 4px;
+    }
+    
+    .tc-team-hero-commas {
+        font-size: 36px;
+    }
+    
+    .tc-team-hero-quote {
+        font-size: 16px;
+    }
+}
         height: auto;
     }
 }
@@ -1306,6 +1411,37 @@ body {
         flex-direction: column;
         text-align: center;
     }
+    
+    /* Team Hero Mobile */
+    .tc-team-hero {
+        height: 300px;
+    }
+    
+    .tc-team-hero-title {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+    
+    .tc-team-hero-commas {
+        font-size: 28px;
+    }
+    
+    .tc-team-hero-subtitle {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+    
+    .tc-team-hero-quote {
+        font-size: 14px;
+    }
+    
+    .tc-team-hero-attribution {
+        font-size: 10px;
+    }
+    
+    .tc-team-intro {
+        padding: 32px 16px 24px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1315,6 +1451,18 @@ body {
     
     .tc-team-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .tc-team-hero {
+        height: 260px;
+    }
+    
+    .tc-team-hero-title {
+        font-size: 20px;
+    }
+    
+    .tc-team-hero-overlay {
+        padding-bottom: 24px;
     }
 }
 
