@@ -479,6 +479,73 @@ body {
     flex-shrink: 0;
 }
 
+/* Category Filter Bar */
+.tc-category-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 24px;
+    background: rgba(201,168,76,0.03);
+    border-top: 1px solid rgba(201,168,76,0.1);
+}
+
+.tc-catbar-label {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: #00FF41;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.tc-catbar-filters {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tc-catbar-filters::-webkit-scrollbar {
+    display: none;
+}
+
+.tc-catbar-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 20px;
+    color: #9ca3af;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+}
+
+.tc-catbar-btn:hover {
+    border-color: rgba(201,168,76,0.5);
+    color: #C9A84C;
+    background: rgba(201,168,76,0.05);
+}
+
+.tc-catbar-btn.active {
+    background: rgba(201,168,76,0.15);
+    border-color: #C9A84C;
+    color: #FFD700;
+}
+
+.tc-catbar-icon {
+    font-size: 14px;
+}
+
+.tc-catbar-text {
+    font-size: 11px;
+    font-weight: 500;
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    RECIPE AREA
    ═══════════════════════════════════════════════════════════════════════════ */
@@ -1375,6 +1442,22 @@ body {
     
     .tc-bio-equity {
         margin-top: 8px;
+    }
+    
+    /* Category Bar Mobile */
+    .tc-category-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 16px;
+    }
+    
+    .tc-catbar-btn {
+        padding: 5px 10px;
+    }
+    
+    .tc-catbar-text {
+        font-size: 10px;
     }
     
     .tc-recipe-area {

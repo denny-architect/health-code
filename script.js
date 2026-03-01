@@ -774,6 +774,7 @@ const HEADER_TAGLINES = [
 
 let activeCharacter = 'all';
 let activeCategory = 'all';
+let activeCategoryFilter = 'all';
 let activeSection = 'recipes';
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -787,6 +788,7 @@ document.addEventListener('DOMContentLoaded', () => {
     buildTeamGrid();
     buildPressReleases();
     setupCategoryTabs();
+    setupCategoryBar();
     setupSecondaryNav();
     startTaglineRotation();
     setupScrollAnimations();
@@ -999,9 +1001,20 @@ function filterRecipes() {
         const cardCat = card.dataset.category;
         
         const matchesChar = activeCharacter === 'all' || cardChar === activeCharacter;
+        
+        // Category bar filter logic
+        let matchesCatBar = true;
+        if (activeCategoryFilter === 'smoothie-pre' || activeCategoryFilter === 'smoothie-post') {
+            // For pre/post workout, only show smoothies (they all have both versions)
+            matchesCatBar = cardCat === 'smoothie';
+        } else if (activeCategoryFilter !== 'all') {
+            matchesCatBar = cardCat === activeCategoryFilter;
+        }
+        
+        // Also check the old category tabs if still used
         const matchesCat = activeCategory === 'all' || cardCat === activeCategory;
         
-        if (matchesChar && matchesCat) {
+        if (matchesChar && matchesCatBar && matchesCat) {
             card.style.display = '';
             card.classList.remove('tc-filtered-out');
             visibleCount++;
@@ -1013,8 +1026,14 @@ function filterRecipes() {
     
     // Update header
     const header = document.getElementById('recipeAreaHeader');
+    const filterLabel = activeCategoryFilter !== 'all' ? activeCategoryFilter.replace('-', ' ') : '';
+    
     if (activeCharacter === 'all') {
-        header.innerHTML = `<span class="tc-rh-all">// showing ${visibleCount} recipes${activeCategory !== 'all' ? ` in ${activeCategory}` : ' across 4 categories'}</span>`;
+        let filterText = '';
+        if (activeCategoryFilter !== 'all') {
+            filterText = ` · filtered: ${filterLabel}`;
+        }
+        header.innerHTML = `<span class="tc-rh-all">// showing ${visibleCount} recipes${filterText || ' across 4 categories'}</span>`;
     } else {
         const char = CHARACTERS.find(c => c.id === activeCharacter);
         header.innerHTML = `
@@ -1054,6 +1073,27 @@ function setupCategoryTabs() {
             tab.classList.add('active');
             activeCategory = tab.dataset.category;
             filterRecipes();
+        });
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CATEGORY BAR (New filter bar above secondary nav)
+// ═══════════════════════════════════════════════════════════════════════════
+
+function setupCategoryBar() {
+    const btns = document.querySelectorAll('.tc-catbar-btn');
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeCategoryFilter = btn.dataset.filter;
+            filterRecipes();
+            
+            // Switch to recipes section if not already there
+            if (activeSection !== 'recipes') {
+                showSection('recipes');
+            }
         });
     });
 }
