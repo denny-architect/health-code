@@ -999,14 +999,15 @@ function filterRecipes() {
     allCards.forEach(card => {
         const cardChar = card.dataset.characterIds;
         const cardCat = card.dataset.category;
+        const isSignature = card.dataset.isSignature === 'true';
         
         const matchesChar = activeCharacter === 'all' || cardChar === activeCharacter;
         
         // Category bar filter logic
         let matchesCatBar = true;
-        if (activeCategoryFilter === 'smoothie-pre' || activeCategoryFilter === 'smoothie-post') {
-            // For pre/post workout, only show smoothies (they all have both versions)
-            matchesCatBar = cardCat === 'smoothie';
+        if (activeCategoryFilter === 'signature') {
+            // Only show signature recipes
+            matchesCatBar = isSignature;
         } else if (activeCategoryFilter !== 'all') {
             matchesCatBar = cardCat === activeCategoryFilter;
         }
