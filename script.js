@@ -889,7 +889,8 @@ function buildRecipeCards() {
     
     RECIPES.forEach(recipe => {
         const char = CHARACTERS.find(c => c.id === recipe.characterId);
-        const cardImg = char.card || char.portrait;
+        // Always use portrait for consistent layout (trading cards have different aspect ratios)
+        const cardImg = char.portrait;
         
         const card = document.createElement('div');
         card.className = 'tc-recipe-card';
@@ -1082,7 +1083,7 @@ function buildTeamGrid() {
         card.style.setProperty('--char-accent', char.accentColor);
         
         card.innerHTML = `
-            <img class="tc-team-card-img" src="${char.card || char.portrait}" alt="${char.fullName}">
+            <img class="tc-team-card-img" src="${char.portrait}" alt="${char.fullName}">
             <div class="tc-team-card-body">
                 <div class="tc-team-card-name">${char.fullName}</div>
                 <div class="tc-team-card-title">${char.title}</div>
